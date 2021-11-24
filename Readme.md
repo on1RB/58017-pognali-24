@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Никита Дудкевич](https://up.htmlacademy.ru/adaptive/24/user/58017).
-* Наставник: `Arthur Litovko`.
+* Наставник: [Артур Литовко](https://htmlacademy.ru/profile/id6927).
 
 ---
 
