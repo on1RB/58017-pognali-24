@@ -22,7 +22,7 @@ function reload(done) {
 
 function watcher() {
   gulp.watch(
-    ["source/pages/*.pug", "source/mock/data.json"],
+    ["source/pages/**/*.pug", "source/mock/data.json"],
     gulp.series(compilePug, reload)
   );
   gulp.watch("source/assets/**/*", gulp.series(copyAssets, reload));
