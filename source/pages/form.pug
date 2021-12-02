@@ -1,0 +1,58 @@
+extends common/base
+
+block pageInfo
+  -
+    location = 'form.html'
+
+block main
+  main.form-main
+    h1.visually-hidden Выберите направление и "Погнали?"
+    section.profile-card
+      h2._title Направления
+      ._wrapper
+        label.level._level(lang="en") level
+          meter(value=80, max=100)
+        img(src="img/profile-photo.png", alt="Ваше фото.")
+      a._change-photo(href="#" download) Сменить фото
+      fieldset._tags
+        legend._hashtag-title Тэги
+        a #бургер
+        a #бар
+        a #футбол
+        a #концерт
+        a #крафт
+      fieldset._activity
+        legend._transport Транспорт
+        ul.hobby-list._hobby
+          li._item
+            img(src="img/plane.svg", alt="Попутчик согласен на авиаперевозки")
+          li._item
+            img(src="img/bus.svg", alt="Попутчик не согласен на автобусные путешествия.")
+          li._item
+            img(src="img/bicycle.svg", alt="Попутчик любит кататься на велосипеде.")
+          li._item
+            img(src="img/run.svg", alt="Попутчик любит пешие прогулки.")
+    section.plans
+      h3._title Мои планы:
+      ol.travel-list._list
+        li._item
+          strong._title Франция, Италия
+          p._count 3 попутчика
+          span._date 26 мар — 29 мар
+          a._button Изменить
+        li._item
+          strong._title Таиланд, Индонезия
+          p._count 1 попутчика
+          span._date 1 июл — 15 июл
+          a._button Изменить
+    section.add-plans
+      ._wrapper
+        h3._title Добавить план:
+        p._toggles
+          button._toggle.-current(type="button")
+          button._toggle(type="button")
+          button._toggle(type="button")
+      include includes/travel-form
+    footer.-page-footer
+      include includes/footer
+

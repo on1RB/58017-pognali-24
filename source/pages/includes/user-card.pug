@@ -1,0 +1,41 @@
+each item in userInfo
+  section.user-card
+    img(src=`img/${item.userSrc}.png`, alt=item.userAlt)
+    span._like.-active.visually-hidden Хотите поставить лайк?
+    ._wrapper
+      h3._name
+        =item.name
+        <br>
+        =item.surname
+      strong._count=item.like
+    ul.tags-list._list
+      each item in ['#ЗОЖ', '#ПП', '#Фитнес', '#пляж', '#авокадо', '#смузи']
+        li._item
+          a._link= item
+    span._visit хочет посетить:
+    ul.state-list._list
+      li._item
+        img(src=`img/Sri-Lanka-small.png`, alt="Шри-ланка")
+        span._description Шри-ланка
+      li._item
+        img(src="img/Thailand-small.png", alt="Таиланд")
+        span._description Таиланд
+      li._item
+        img(src="img/Seychelles-small.png", alt="Сейшелы")
+        span._description Сейшелы
+    ._inner
+      span._transport транспорт:
+      span._level левел:
+    ._inner
+      ul.transport-list._list
+        li._item
+          img(src="img/plane.svg", alt="Попутчик согласен на авиаперевозки.")
+        li._item
+          img(src="img/bus.svg", alt="Попутчик не согласен на автобусные путешествия.")
+        li._item
+          img(src="img/bicycle.svg", alt="Попутчик любит кататься на велосипеде.")
+        li._item
+          img(src="img/run.svg", alt="Попутчик любит пешие прогулки.")
+      label.level._level(lang="en") level
+        meter(value=item.level, max=100)
+    button._call(type="button") Позвать!

@@ -1,0 +1,18 @@
+extends common/base
+
+block pageInfo
+  -
+    location = 'catalog.html'
+
+
+block main
+  main.catalog-main
+    h1.visually-hidden Выберите попутчиков и "Погнали?"
+    include includes/catalog-filter
+    include includes/companion
+    include includes/user-card
+    button._prev.visually-hidden(type="button") Предыдущая страница
+    button._show(type="button") показать еще
+    button._next.visually-hidden(type="button") Следующая страница
+  footer.page-footer
+    include includes/footer

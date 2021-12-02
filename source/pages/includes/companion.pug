@@ -1,0 +1,53 @@
+section.companion
+  h2._title Подберите <br> идеального <br> попутчика
+  button._hobby(type="button") Хобби
+  button._music(type="button") Музыка
+  ul.music-list
+    li._item
+      label.control
+        input._input.visually-hidden(type="checkbox" name="hard-rock" checked)
+        span._mark
+        span._label Тяжелый рок
+    li._item
+      label.control
+        input._input.visually-hidden(type="checkbox" name="russian-rap" checked)
+        span._mark
+        span._label Русский рэп
+    li._item
+      label.control
+        input._input.visually-hidden(type="checkbox" name="eurodance")
+        span._mark
+        span._label Евроденс
+  button._food(type="button") Еда
+  button._transport(type="button") Транспорт
+  ul.transport-list
+    li._item
+      label._control.visually-hidden Попутчик согласен на авиаперевозки.
+        input(type="checkbox" name="plane" checked)
+        span._mark
+    li._item
+      label._control.visually-hidden Попутчик не согласен на автобусные путешествия.
+        input(type="checkbox" name="plane" checked)
+        span._mark
+    li._item
+      label._control.visually-hidden Попутчик любит кататься на велосипеде.
+        input(type="checkbox" name="plane")
+        span._mark
+    li._item
+      label._control.visually-hidden Попутчик любит пешие прогулки.
+        input(type="checkbox" name="plane" checked)
+        span._mark
+  button._level(type="button") Левел
+  .range-wrapper
+    label._label
+      input._input(type="number" name="min-level" value="30")
+    label._label
+      input._input(type="number" name="max-level" value="100")
+  .range
+    ._scale
+      ._bar
+        button._toggle.-min(type="button")
+          span.visually-hidden Изменить минимальный уровень
+        button._toggle.-max(type="button")
+          span.visually-hidden Изменить максимальный уровень
+  button._show(type="button") Показать

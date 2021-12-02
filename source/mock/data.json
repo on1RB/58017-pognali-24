@@ -1,4 +1,63 @@
 {
-  "foo": "bar",
-  "lorem": "ipsum"
+  "navLinks": [
+    {
+      "href": "index.html",
+      "text": "О сервисе"
+    },
+    {
+      "href": "form.html",
+      "text": "Направления"
+    },
+    {
+      "href": "catalog.html",
+      "text": "Попутчики"
+    }
+  ],
+
+  "userInfo": [
+    {
+      "userSrc": "firsova-mobile",
+      "userAlt": "Фото Тани Фирсовой",
+      "name": "Таня",
+      "surname": "Фирсова",
+      "like": "1,5 М",
+      "hashtag": "['#ЗОЖ', '#ПП', '#Фитнес', '#пляж', '#авокадо', '#смузи']",
+      "countrySrc": "['Sri-Lanka-small', 'Thailand-small', 'Seychelles-small']",
+      "countryAlt": "['Шри-ланка', 'Таиланд', 'Сейшелы']",
+      "level": "99"
+    },
+    {
+      "userSrc": "demin-mobile",
+      "userAlt": "Фото Пети Демина",
+      "name": "Петя",
+      "surname": "Демин",
+      "like": "1500",
+      "hashtag": "['#ЗОЖ', '#ПП', '#Фитнес', '#пляж', '#авокадо', '#смузи']",
+      "countrySrc": "['Sri-Lanka-small', 'Thailand-small', 'Seychelles-small']",
+      "countryAlt": "['Шри-ланка', 'Таиланд', 'Сейшелы']",
+      "level": "80"
+    },
+    {
+      "userSrc": "smolov-mobile",
+      "userAlt": "Фото Марка Смолова",
+      "name": "Марк",
+      "surname": "Смолов",
+      "like": "170",
+      "hashtag": "['#ЗОЖ', '#ПП', '#Фитнес', '#пляж', '#авокадо', '#смузи']",
+      "countrySrc": "['Sri-Lanka-small', 'Thailand-small', 'Seychelles-small']",
+      "countryAlt": "['Шри-ланка', 'Таиланд', 'Сейшелы']",
+      "level": "25"
+    },
+    {
+      "userSrc": "rogovaya-mobile",
+      "userAlt": "Фото Ларисы Роговой",
+      "name": "Лариса",
+      "surname": "Роговая",
+      "like": "23",
+      "hashtag": "['#ЗОЖ', '#ПП', '#Фитнес', '#пляж', '#авокадо', '#смузи']",
+      "countrySrc": "['Sri-Lanka-small', 'Thailand-small', 'Seychelles-small']",
+      "countryAlt": "['Шри-ланка', 'Таиланд', 'Сейшелы']",
+      "level": "50"
+    }
+  ]
 }
