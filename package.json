@@ -26,5 +26,11 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "gulp-less": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1"
+  }
 }
