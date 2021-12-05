@@ -1,197 +1,121 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Погнали?
-  body.page__body
-    header.page-header
-      a._logo
-        img(src="img/main-logo.svg", width="226", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
-      nav.main-nav
-        button._toggle(type="button")
-          span.visually-hidden Открыть меню.
-        ._wrapper
-          ul.site-list._list
-            li._item
-              a О сервисе
-            li._item
-              a(href="form.html") Направления
-            li._item
-              a(href="catalog.html") Попутчики
-          ul.user-list._list
-            li._item
-              a._login Авторизация
-            li._item
-              a._phone(href="tel:88005558628") 8 800 555-86-28
-            li._item
-              a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-          ul.social-list._list
-            li._item
-              a._link.-fb(href="https://www.facebook.com/htmlacademy", aria-label="Фейсбук.")
-            li._item
-              a._link.-vk(href="https://vk.com/htmlacademy", aria-label="ВКонтакте.")
-            li._item
-              a._link.-inst(href="https://www.instagram.com/htmlacademy/", aria-label="Инстаграм.")
-      section.apps
-        h1.visually-hidden Путешествия вместе с "Погнали?"
-        p._title
-          strong В путешествие с крутыми попутчиками!
-        ul._list
-          li._item
-            a._phone(href="tel:88005558628") 8 800 555-86-28
-          li._item
-            a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-          li._item
-            a._login(href="#") Авторизация
-        figure._text
-          blockquote._quote «Лучшее приложение, что я видел в жизни!»
-          figcaption._author Мурат Эльтазин главный редактор газеты «гаджетлайф»
-        ol.features-list._list
-          li._item Выберите направление
-          li._item Изучите идеи путешественников
-          li._item Находите тех, кто похож на вас
-          li._item Путешествуйте вместе!
-    main.page-main
-      section.about
-        h2._title О сервисе
-        p._description Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-        p._slogan А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
-      section.direction
-        h2._title Направления
-        p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-        ul.list-country._list
-          li.country-card
-            img._pic(src="img/Thailand.png", width="35", height="24", alt="Таиланд.")
-            ._wrapper
-              h3._title Таиланд
-              p._description Джунгли зовут!
-            p._count
-              span.visually-hidden="Попутчиков"
-              | 18321
-          li.country-card
-            img._pic(src="img/France.png", width="35", height="24", alt="Франция.")
-            ._wrapper
-              h3._title Франция
-              p._description Трэ бьен, манифик!
-            p._count
-              span.visually-hidden="Попутчиков"
-              | 12518
-          li.country-card
-            img._pic(src="img/Czech.png", width="35", height="24", alt="Чехия.")
-            ._wrapper
-              h3._title Чехия
-              p._description Закоулки старой Европы
-            p._count
-              span.visually-hidden="Попутчиков"
-              | 5326
-        a.button(href="form.html") Показать все
-      section.companion
-        h2._title Попутчики
-        p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        p._slogan Теперь можно легко найти единомышленников!
-        .user-card
-          ._inner.-first
-            label.level._level(lang="en") level
-              meter(value=99, max=100)
-          ._info
-            ul.country-list._country
-              li._item
-                img(src="img/Sri-Lanka.png", width="35", height="25", alt="Шри Ланка.")
-              li._item
-                img(src="img/Thailand.png", width="35", height="25", alt="Таиланд.")
-              li._item
-                img(src="img/Seychelles.png", width="35", height="25", alt="Сейшелы.")
-            strong._name Таня Фирсова
-            p._hashtag
-              a #ЗОЖ
-              a #ПП
-              a #Фитнес
-              a #пляж
-              a #авокадо
-              a #смузи
-            ul.hobby-list._hobby
-              li._item
-                img(src="img/plane.svg", alt="Самолет.")
-              li._item
-                img(src="img/bus.svg", alt="Автобус.")
-              li._item
-                img(src="img/bicycle.svg", alt="Велосипед.")
-              li._item
-                img(src="img/run.svg", alt="Бег.")
-        .user-card
-          ._inner.-second
-            label.level._level(lang="en") level
-              meter(value=80, max=100)
-          ._info
-            ul.country-list._country
-              li._item
-                img(src="img/Belgium.png", width="35", height="25", alt="Бельгия.")
-              li._item
-                img(src="img/Czech.png", width="35", height="25", alt="Чехия.")
-            strong._name Петя Демин
-            p._hashtag
-              a #бургер
-              a #бар
-              a #футбол
-              a #концерт
-              a #крафт
-            ul.hobby-list._hobby
-              li._item
-                img(src="img/plane.svg", alt="Попутчик согласен на авиаперевозки")
-              li._item
-                img(src="img/bus.svg", alt="Попутчик не согласен на автобусные путешествия.")
-              li._item
-                img(src="img/bicycle.svg", alt="Попутчик любит кататься на велосипеде.")
-              li._item
-                img(src="img/run.svg", alt="Попутчик любит пешие прогулки.")
-        a.button(href="catalog.html" aria-label="Показать всех.") Показать всех
-      section.profile
-        ._wrapper
-          h2.title Добавьте свой профиль
-          img(src="img/rates.png", width="100", height="100" alt="Ставки.")
-        ol.pricing-list._pricing
-          li._item
-            p._description Базовое размещение
-            p._value Бесплатно
-          li._item
-            p._description Вывод на первых позициях
-            p._value 99 руб./мес
-          li._item
-            p._description Кастомный цвет карточки
-            p._value 59 руб./мес
-        button._show(type="button") Показать тарифы для бизнеса
-    footer.page-footer
-      section.interested
-        h2._title Заинтересовались?
-        p._description Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-          a._link авторизуйтесь
-          | .
-        form._mail(action="https://echo.htmlacademy.ru" method="post")
-          label.visually-hidden(for="email") Email
-          input._field(type="email" id="email" name="email" placeholder="E-mail" required)
-          button._button(type="submit") Регистрация.
-        p._question Остались вопросы? Мы с радостью на них ответим!
-        address._wrapper
-          a._phone(href="tel:88005558628") 8 800 555-86-28
+extends common/base
+
+block pageInfo
+  -
+    location = 'index.html'
+
+block main
+  main.page-main
+    h1.visually-hidden Путешествия вместе с "Погнали?"
+    section.intro
+      p._title
+        strong В путешествие с крутыми попутчиками!
+      ul._list
+        li._item
+          a._phone(href="tel:88005558628") 8 800 555-86-28
+        li._item
           a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-      section.navigation
-        address._address
-          p._text ул. Большая Конюшенная, 19/8
-          button._button(type="button") Проложить маршрут
-        ._map
-          span._mark.visually-hidden Наш адрес
-        ._wrapper
-          a._logo
-            img(src="img/main-logo.svg", width="226", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
-          ul.social-list._list
-            li._item
-              a._link.-fb.-color(href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук.")
-            li._item
-              a._link.-vk.-color(href="https://vk.com/htmlacademy" aria-label="ВКонтакте.")
-            li._item
-              a._link.-inst.-color(href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм.")
-        ._copyright
-          span._text Разработано
-          img(src="img/htmlacademy.svg", alt="Логотип htmlacademy.")
+        li._item
+          a._login(href="#") Авторизация
+      figure._text
+        blockquote._quote «Лучшее приложение, что я видел в жизни!»
+        figcaption._author Мурат Эльтазин главный редактор газеты «гаджетлайф»
+      ol.features-list._list
+        li._item Выберите направление
+        li._item Изучите идеи путешественников
+        li._item Находите тех, кто похож на вас
+        li._item Путешествуйте вместе!
+    section.about
+      h2._title О сервисе
+      p._description Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+      p._slogan А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
+    section.direction
+      h2._title Направления
+      p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+      ul.list-country._list
+        li.country-card
+          img._pic(src="img/thailand.png", width="35", height="24", alt="Таиланд.")
+          ._wrapper
+            h3._title Таиланд
+            p._description Джунгли зовут!
+          p._count
+            span.visually-hidden="Попутчиков"
+            | 18321
+        li.country-card
+          img._pic(src="img/france.png", width="35", height="24", alt="Франция.")
+          ._wrapper
+            h3._title Франция
+            p._description Трэ бьен, манифик!
+          p._count
+            span.visually-hidden="Попутчиков"
+            | 12518
+        li.country-card
+          img._pic(src="img/czech.png", width="35", height="24", alt="Чехия.")
+          ._wrapper
+            h3._title Чехия
+            p._description Закоулки старой Европы
+          p._count
+            span.visually-hidden="Попутчиков"
+            | 5326
+      a.button(href="form.html") Показать все
+    section.companion
+      h2._title Попутчики
+      p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+      p._slogan Теперь можно легко найти единомышленников!
+      each user in [users[0], users[1]]
+        .user-card
+          ._inner
+            img._photo(src=`img/${user.userPhoto}.png`, alt=user.userAlt)
+            label.level._level(lang="en") level
+              meter(value=user.level, max=100)
+          ._info
+            ul.country-list._country
+              each country in user.countries
+                li._item
+                  img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
+            h3._name=user.name + ' ' + user.surname
+            ul.hashtag-list._list
+              each tag in user.hashtag
+                li._item
+                  a(href="")._link=tag
+            ul.hobby-list._hobby
+              each isLiked, hobby in user.hobbies
+                li._item
+                  img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
+      a.button(href="catalog.html" aria-label="Показать всех.") Показать всех
+    section.profile
+      ._wrapper
+        h2.title Добавьте свой профиль
+        img(src="img/rates.png", width="100", height="100" alt="Ставки.")
+      ol.pricing-list._pricing
+        li._item
+          p._description Базовое размещение
+          p._value Бесплатно
+        li._item
+          p._description Вывод на первых позициях
+          p._value 99 руб./мес
+        li._item
+          p._description Кастомный цвет карточки
+          p._value 59 руб./мес
+      button._show(type="button") Показать тарифы для бизнеса
+    section.interested
+      h2._title Заинтересовались?
+      p._description Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+        a._link авторизуйтесь
+        | .
+      form._mail(action="https://echo.htmlacademy.ru" method="post")
+        label.visually-hidden(for="email") Email
+        input._field(type="email" id="email" name="email" placeholder="E-mail" required)
+        button._button(type="submit") Регистрация.
+      p._question Остались вопросы? Мы с радостью на них ответим!
+      address._wrapper
+        a._phone(href="tel:88005558628") 8 800 555-86-28
+        a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+  footer.page-footer
+    section.navigation
+      address._address
+        p._text ул. Большая Конюшенная, 19/8
+        button._button(type="button") Проложить маршрут
+      ._map
+        span._mark.visually-hidden Наш адрес
+    include includes/footer

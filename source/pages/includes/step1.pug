@@ -1,0 +1,20 @@
+section.step1
+  p._title Шаг 1.<br> Даты пребывания
+  p._description Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+  ._wrapper
+    strong._companion Ищу попутчиков:
+    span._person Чел.
+    include counter
+  ._wrapper
+    strong._companion Длительность:
+    span._person Дн.
+    include counter
+  label._child
+    input._field(type="checkbox" name="child")
+    span._text Можно с детьми
+  ._date
+    button._button.visually-hidden(type="button") Прошлый месяц.
+    p._month Март 2019
+    button._button.visually-hidden(type="button") Следующий месяц.
+  include calendar
+  button.step-next(type="button") Следующий шаг

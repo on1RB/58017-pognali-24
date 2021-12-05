@@ -1,0 +1,8 @@
+.add-country
+  p.title Выберите страну
+  button._close(type="button")
+  include filter-table
+  ul.country-list
+    each item in ['Австралия', 'Австрия', 'Азербайджан', 'Албания', 'Алжир', 'Ангола', 'Андорра', 'Антигуа и Барбуда', 'Аргентина', 'Армения', 'Афганистан']
+      li._item
+        a._link= item

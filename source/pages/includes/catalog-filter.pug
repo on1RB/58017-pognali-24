@@ -1,0 +1,23 @@
+section.filter
+  ._wrapper
+    img(src="img/filter-icon.svg", alt="Иконка фильтра")
+    p._text Фильтрация по странам:
+    button._open(type="button")
+      img(src="img/filter-open.svg", alt="Открыть фильтр")
+    button._close(type="button")
+      img(src="img/filter-close.svg", alt="Закрыть фильтр")
+  ul.mainland-list
+    li._item
+      a._mainland.-current Европа
+    li._item
+      a._mainland Азия
+    li._item
+      a._mainland Америка
+    li._item
+      a._mainland Острова
+  include filter-table
+  ul.country-list
+    each item in ['Австралия', 'Австрия', 'Азербайджан', 'Албания', 'Алжир', 'Ангола', 'Андорра', 'Антигуа и Барбуда', 'Аргентина', 'Армения', 'Афганистан']
+      li._item
+        a._link= item
+  button._roll(type="button") Свернуть

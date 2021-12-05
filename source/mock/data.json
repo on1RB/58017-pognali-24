@@ -1,4 +1,73 @@
 {
-  "foo": "bar",
-  "lorem": "ipsum"
+  "navLinks": [
+    {
+      "href": "index.html",
+      "text": "О сервисе"
+    },
+    {
+      "href": "form.html",
+      "text": "Направления"
+    },
+    {
+      "href": "catalog.html",
+      "text": "Попутчики"
+    }
+  ],
+
+  "users": [
+    {
+      "userPhoto": "firsova",
+      "userAvatar": "firsova-avatar",
+      "userAlt": "Фото Тани Фирсовой",
+      "name": "Таня",
+      "surname": "Фирсова",
+      "like": "1,5 М",
+      "hashtag": ["#ЗОЖ", "#ПП", "#Фитнес", "#пляж", "#авокадо", "#смузи"],
+      "countries": ["sri-lanka", "thailand", "seychelles"],
+      "level": "99",
+      "hobbies": {"plane": true, "bus": false, "bicycle": false, "run": false}
+    },
+    {
+      "userPhoto": "demin",
+      "userAvatar": "demin-avatar",
+      "userAlt": "Фото Пети Демина",
+      "name": "Петя",
+      "surname": "Демин",
+      "like": "1500",
+      "hashtag": ["#бургер", "#бар", "#футбол", "#концерт", "#крафт"],
+      "countries": ["belgium", "czech"],
+      "level": "80",
+      "hobbies": {"plane": true, "bus": true, "bicycle": false, "run": true}
+    },
+    {
+      "userPhoto": "smolov",
+      "userAvatar": "smolov-avatar",
+      "userAlt": "Фото Марка Смолова",
+      "name": "Марк",
+      "surname": "Смолов",
+      "like": "170",
+      "hashtag": ["#рэп", "#тату", "#хайпбист", "#кроссовки", "#суприм"],
+      "countries": ["usa", "australia", "dominica"],
+      "level": "25",
+      "hobbies": {"plane": true, "bus": false, "bicycle": true, "run": false}
+    },
+    {
+      "userPhoto": "rogovaya",
+      "userAvatar": "rogovaya-avatar",
+      "userAlt": "Фото Ларисы Роговой",
+      "name": "Лариса",
+      "surname": "Роговая",
+      "like": "23",
+      "hashtag": ["#образование", "#карьера", "#учеба", "#линкедин"],
+      "countries": ["united-kingdom", "germany"],
+      "level": "50",
+      "hobbies": {"plane": true, "bus": true, "bicycle": false, "run": false}
+    }
+  ],
+
+  "RANGE_SLIDER": {"min": 0, "max": 100, "valueA": 30, "valueB": 100},
+
+  "COUNTRIES_RUS": {"sri-lanka": "Шри-Ланка", "thailand": "Таиланд", "seychelles": "Сейшелы", "belgium": "Бельгия", "czech": "Чехия", "usa": "США", "australia": "Австралия", "dominica": "Доминика", "united-kingdom": "Великобритания", "germany": "Германия"},
+
+  "HOBBIES_RUS": {"plane": "авиаперевозки", "bus": "автобусные путешествия", "bicycle": "кататься на велосипеде", "run": "пешие прогулки"}
 }
