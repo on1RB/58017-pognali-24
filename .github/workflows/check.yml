@@ -19,10 +19,20 @@ jobs:
     - uses: actions/checkout@master
       name: Checkout
 
-    - name: Install dependencies
+    - name: Install dependencies 🚧
       run: |
-        npm install
+        npm ci
 
-    - name: Run checks
+    - name: Build 🏗️
+      run: |
+        npm run build
+
+    - name: Run checks ✔️
       run: |
         npm test
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: build # The folder the action should deploy.
