@@ -12,26 +12,21 @@ block main
       ._wrapper
         label.level._level(lang="en") level
           meter(value=80, max=100)
-        img(src="img/profile-photo.png", alt="Ваше фото.")
+        img(src="img/demin-avatar-100x100.png", alt="Ваше фото.")
       a._change-photo(href="#" download) Сменить фото
       fieldset._tags
         legend._hashtag-title Тэги
-        a #бургер
-        a #бар
-        a #футбол
-        a #концерт
-        a #крафт
+        each user in [users[1]]
+            each tag in user.hashtag
+              li._item
+                a(href="")._link=tag
       fieldset._activity
         legend._transport Транспорт
         ul.hobby-list._hobby
-          li._item
-            img(src="img/plane.svg", alt="Попутчик согласен на авиаперевозки")
-          li._item
-            img(src="img/bus.svg", alt="Попутчик не согласен на автобусные путешествия.")
-          li._item
-            img(src="img/bicycle.svg", alt="Попутчик любит кататься на велосипеде.")
-          li._item
-            img(src="img/run.svg", alt="Попутчик любит пешие прогулки.")
+          each user in [users[1]]
+            each isLiked, hobby in user.hobbies
+              li._item
+                img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
     section.plans
       h3._title Мои планы:
       ol.travel-list._list

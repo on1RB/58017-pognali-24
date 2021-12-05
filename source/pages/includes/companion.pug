@@ -37,17 +37,16 @@ section.companion
       label._control.visually-hidden Попутчик любит пешие прогулки.
         input(type="checkbox" name="plane" checked)
         span._mark
-  button._level(type="button") Левел
-  .range-wrapper
-    label._label
-      input._input(type="number" name="min-level" value="30")
-    label._label
-      input._input(type="number" name="max-level" value="100")
-  .range
-    ._scale
-      ._bar
-        button._toggle.-min(type="button")
-          span.visually-hidden Изменить минимальный уровень
-        button._toggle.-max(type="button")
-          span.visually-hidden Изменить максимальный уровень
+  fieldset(aria-expanded="true")
+    legend._level Левел
+    .range-wrapper
+      label._label
+        span.visually-hidden#range-min Минимальный
+        input._input(type="number" name="min-level" value=RANGE_SLIDER.valueA min=RANGE_SLIDER.min, max=RANGE_SLIDER.max)
+      label._label
+        span.visually-hidden#range-max Максимальный
+        input._input(type="number" name="max-level" value=RANGE_SLIDER.valueB min=RANGE_SLIDER.min, max=RANGE_SLIDER.max)
+    .range
+      input.cost__input(type="range", value=RANGE_SLIDER.valueA min=RANGE_SLIDER.min, max=RANGE_SLIDER.max aria-labelledby='range-min')
+      input.cost__input(type="range", value=RANGE_SLIDER.valueB min=RANGE_SLIDER.min, max=RANGE_SLIDER.max aria-labelledby='range-max')
   button._show(type="button") Показать

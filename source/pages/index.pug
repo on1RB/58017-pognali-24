@@ -34,7 +34,7 @@ block main
       p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
       ul.list-country._list
         li.country-card
-          img._pic(src="img/Thailand.png", width="35", height="24", alt="Таиланд.")
+          img._pic(src="img/thailand.png", width="35", height="24", alt="Таиланд.")
           ._wrapper
             h3._title Таиланд
             p._description Джунгли зовут!
@@ -42,7 +42,7 @@ block main
             span.visually-hidden="Попутчиков"
             | 18321
         li.country-card
-          img._pic(src="img/France.png", width="35", height="24", alt="Франция.")
+          img._pic(src="img/france.png", width="35", height="24", alt="Франция.")
           ._wrapper
             h3._title Франция
             p._description Трэ бьен, манифик!
@@ -50,7 +50,7 @@ block main
             span.visually-hidden="Попутчиков"
             | 12518
         li.country-card
-          img._pic(src="img/Czech.png", width="35", height="24", alt="Чехия.")
+          img._pic(src="img/czech.png", width="35", height="24", alt="Чехия.")
           ._wrapper
             h3._title Чехия
             p._description Закоулки старой Европы
@@ -62,58 +62,26 @@ block main
       h2._title Попутчики
       p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
       p._slogan Теперь можно легко найти единомышленников!
-      .card
-        ._inner.-first
-          label.level._level(lang="en") level
-            meter(value=99, max=100)
-        ._info
-          ul.country-list._country
-            li._item
-              img(src="img/Sri-Lanka.png", width="35", height="25", alt="Шри Ланка.")
-            li._item
-              img(src="img/Thailand.png", width="35", height="25", alt="Таиланд.")
-            li._item
-              img(src="img/Seychelles.png", width="35", height="25", alt="Сейшелы.")
-          h3._name Таня Фирсова
-          ul.hashtag-list._list
-            each item in ['#ЗОЖ', '#ПП', '#Фитнес', '#пляж', '#авокадо', '#смузи']
-              li._item
-                a._link= item
-          ul.hobby-list._hobby
-            li._item
-              img(src="img/plane.svg", alt="Попутчик согласен на авиаперевозки.")
-            li._item
-              img(src="img/bus.svg", alt="Попутчик не согласен на автобусные путешествия.")
-            li._item
-              img(src="img/bicycle.svg", alt="Попутчик любит кататься на велосипеде.")
-            li._item
-              img(src="img/run.svg", alt="Попутчик любит пешие прогулки.")
-      .user-card
-        ._inner.-second
-          label.level._level(lang="en") level
-            meter(value=80, max=100)
-        ._info
-          ul.country-list._country
-            li._item
-              img(src="img/Belgium.png", width="35", height="25", alt="Бельгия.")
-            li._item
-              img(src="img/Czech.png", width="35", height="25", alt="Чехия.")
-          h3._name Петя Демин
-          p._hashtag
-            a #бургер
-            a #бар
-            a #футбол
-            a #концерт
-            a #крафт
-          ul.hobby-list._hobby
-            li._item
-              img(src="img/plane.svg", alt="Попутчик согласен на авиаперевозки.")
-            li._item
-              img(src="img/bus.svg", alt="Попутчик не согласен на автобусные путешествия.")
-            li._item
-              img(src="img/bicycle.svg", alt="Попутчик любит кататься на велосипеде.")
-            li._item
-              img(src="img/run.svg", alt="Попутчик любит пешие прогулки.")
+      each user in [users[0], users[1]]
+        .user-card
+          ._inner
+            img._photo(src=`img/${user.userPhoto}.png`, alt=user.userAlt)
+            label.level._level(lang="en") level
+              meter(value=user.level, max=100)
+          ._info
+            ul.country-list._country
+              each country in user.countries
+                li._item
+                  img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
+            h3._name=user.name + ' ' + user.surname
+            ul.hashtag-list._list
+              each tag in user.hashtag
+                li._item
+                  a(href="")._link=tag
+            ul.hobby-list._hobby
+              each isLiked, hobby in user.hobbies
+                li._item
+                  img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
       a.button(href="catalog.html" aria-label="Показать всех.") Показать всех
     section.profile
       ._wrapper
