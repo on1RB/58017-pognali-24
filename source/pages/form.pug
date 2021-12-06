@@ -16,10 +16,11 @@ block main
       a._change-photo(href="#" download) Сменить фото
       fieldset._tags
         legend._hashtag-title Тэги
-        each user in [users[1]]
-            each tag in user.hashtag
-              li._item
-                a(href="")._link=tag
+        ul.tags-list._tags
+          each user in [users[1]]
+              each tag in user.hashtag
+                li._item
+                  a(href="")._link=tag
       fieldset._activity
         legend._transport Транспорт
         ul.hobby-list._hobby
