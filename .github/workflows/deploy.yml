@@ -2,8 +2,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches: '*'
 
 name: Project check
 jobs:
@@ -27,6 +25,8 @@ jobs:
       run: |
         npm run build
 
-    - name: Run checks ✔️
-      run: |
-        npm test
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: build # The folder the action should deploy.
