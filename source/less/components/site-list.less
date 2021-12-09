@@ -1,0 +1,18 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.site-list__link {
+  display: block;
+  text-decoration: none;
+  font-family: "Bloger-Sans", sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #192144;
+}

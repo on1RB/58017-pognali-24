@@ -1,0 +1,65 @@
+.list-country {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-country__item {
+  position: relative;
+  background-repeat: no-repeat;
+
+  &--thailand {
+    background-color: #02667e;
+    background-image: url("../img/bg-thailand-mobile.png");
+  }
+
+  &--france {
+    background-color: #fdf7f9;
+    background-image: url("../img/bg-france-mobile.png");
+  }
+
+  &--czech {
+    background-color: #dee2ea;
+    background-image: url("../img/bg-czech-mobile.png");
+  }
+}
+
+.list-country__pic {
+  position: absolute;
+}
+
+.list-country__inner {
+  margin-top: 99px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+.list-country__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-country__title {
+  margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.list-country__description {
+  margin: 0;
+  line-height: 18px;
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+.list-country__count {
+  line-height: 20px;
+  font-weight: 500;
+  color: #161c35;
+  opacity: 0.3;
+}

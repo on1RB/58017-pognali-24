@@ -1,6 +1,6 @@
 header.page-header
   a._logo
-    img(src="img/main-logo.svg", width="226", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
+    img._image(src="img/main-logo.svg", width="96", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
   nav.main-nav
     button._toggle(type="button")
       span.visually-hidden Открыть меню.
@@ -9,17 +9,17 @@ header.page-header
         each link in navLinks
           if link.href === location
             li._item.-active
-              a=link.text
+              a._link=link.text
           else
             li._item
-              a(href=link.href)=link.text
+              a._link(href=link.href)=link.text
       ul.user-list._list
         li._item
-          a._login Авторизация
+          a._link.-login Авторизация
         li._item
-          a._phone(href="tel:88005558628") 8 800 555-86-28
+          a._link.-phone(href="tel:88005558628") 8 800 555-86-28
         li._item
-          a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+          a._link.-mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
       ul.social-list._list
         li._item
           a._link.-fb(href="https://www.facebook.com/htmlacademy", aria-label="Фейсбук.")
