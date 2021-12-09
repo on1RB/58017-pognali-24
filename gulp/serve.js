@@ -35,4 +35,4 @@ function watcher() {
 }
 
 export const startProject = gulp.series(compilePug, copyAssets, compileLess)
-export default gulp.series(initServer, watcher);
+export default gulp.series(startProject, initServer, watcher);
