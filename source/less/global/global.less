@@ -1,66 +1,21 @@
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-light.woff2");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300;
+.init-font(@name, @file, @weight: 400, @style: normal) {
+  @font-face {
+    font-family: @name;
+    src: url("../fonts/@{file}.woff2");
+    font-style: @style;
+    font-display: swap;
+    font-weight: @weight;
+  }
 }
 
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans.woff2");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-medium.woff2");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-bold.woff2");
-  font-style: bold;
-  font-display: swap;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-lightitalic.woff2");
-  font-style: italic;
-  font-display: swap;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-italic.woff2");
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-mediumitalic.woff2");
-  font-style: italic;
-  font-display: swap;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Bloger-Sans", sans-serif;
-  src: url("../fonts/bloggersans-bolditalic.woff2");
-  font-style: italic;
-  font-display: swap;
-  font-weight: 700;
-}
+.init-font("Bloger-Sans", "bloggersans-light", 300);
+.init-font("Bloger-Sans", "bloggersans");
+.init-font("Bloger-Sans", "bloggersans-medium", 500);
+.init-font("Bloger-Sans", "bloggersans-bold", 700);
+.init-font("Bloger-Sans", "bloggersans-lightitalic", 300, italic);
+.init-font("Bloger-Sans", "bloggersans-italic", 400, italic);
+.init-font("Bloger-Sans", "bloggersans-mediumitalic", 500, italic);
+.init-font("Bloger-Sans", "bloggersans-bolditalic", 700, italic);
 
 img {
   max-width: 100%;
