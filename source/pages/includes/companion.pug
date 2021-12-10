@@ -1,52 +1,60 @@
-section.companion
-  h2._title Подберите <br> идеального <br> попутчика
-  button._hobby(type="button") Хобби
-  button._music(type="button") Музыка
-  ul.music-list
-    li._item
-      label.control
-        input._input.visually-hidden(type="checkbox" name="hard-rock" checked)
-        span._mark
-        span._label Тяжелый рок
-    li._item
-      label.control
-        input._input.visually-hidden(type="checkbox" name="russian-rap" checked)
-        span._mark
-        span._label Русский рэп
-    li._item
-      label.control
-        input._input.visually-hidden(type="checkbox" name="eurodance")
-        span._mark
-        span._label Евроденс
-  button._food(type="button") Еда
-  button._transport(type="button") Транспорт
-  ul.transport-list
-    li._item
-      label._control.visually-hidden Попутчик согласен на авиаперевозки.
-        input(type="checkbox" name="plane" checked)
-        span._mark
-    li._item
-      label._control.visually-hidden Попутчик не согласен на автобусные путешествия.
-        input(type="checkbox" name="plane" checked)
-        span._mark
-    li._item
-      label._control.visually-hidden Попутчик любит кататься на велосипеде.
-        input(type="checkbox" name="plane")
-        span._mark
-    li._item
-      label._control.visually-hidden Попутчик любит пешие прогулки.
-        input(type="checkbox" name="plane" checked)
-        span._mark
-  fieldset(aria-expanded="true")
-    legend._level Левел
-    .range-wrapper
+form.companion(action="https://echo.htmlacademy.ru" method="post")
+  h2._caption Подберите <br> идеального <br> попутчика
+  fieldset._items
+    button._interest.-hobby(type="button") Хобби
+  fieldset._items
+    button._interest.-music(type="button") Музыка
+    ul.music-list._list
+      li._item
+        label._control
+          input._input(type="checkbox" name="hard-rock" checked)
+          span._mark
+          span._label Тяжелый рок
+      li._item
+        label._control
+          input._input(type="checkbox" name="russian-rap" checked)
+          span._mark
+          span._label Русский рэп
+      li._item
+        label._control
+          input._input(type="checkbox" name="eurodance")
+          span._mark
+          span._label Евроденс
+  fieldset._items
+    button._interest.-food(type="button") Еда
+  fieldset._items
+    button._interest.-transport(type="button") Транспорт
+    ul.transport-list._list
+      li._item
+        label._control
+          input(type="checkbox" name="plane" checked)
+          span._mark
+          span._label Авиаперевозки
+      li._item
+        label._control
+          input(type="checkbox" name="bus" checked)
+          span._mark
+          span._label Автобусные путешествия
+      li._item
+        label._control
+          input(type="checkbox" name="bicycle")
+          span._mark
+          span._label Кататься на велосипеде
+      li._item
+        label._control
+          input(type="checkbox" name="run" checked)
+          span._mark
+          span._label Пешие прогулки
+  fieldset._items(aria-expanded="true")
+    button._interest.-level Левел
+    ._range-wrapper
       label._label
         span.visually-hidden#range-min Минимальный
         input._input(type="number" name="min-level" value=RANGE_SLIDER.valueA min=RANGE_SLIDER.min, max=RANGE_SLIDER.max)
       label._label
         span.visually-hidden#range-max Максимальный
         input._input(type="number" name="max-level" value=RANGE_SLIDER.valueB min=RANGE_SLIDER.min, max=RANGE_SLIDER.max)
-    .range
+    ._range
       input.cost__input(type="range", value=RANGE_SLIDER.valueA min=RANGE_SLIDER.min, max=RANGE_SLIDER.max aria-labelledby='range-min')
       input.cost__input(type="range", value=RANGE_SLIDER.valueB min=RANGE_SLIDER.min, max=RANGE_SLIDER.max aria-labelledby='range-max')
-  button._show(type="button") Показать
+  button.button-show.-bg(type="button") Показать

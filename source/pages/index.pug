@@ -8,15 +8,16 @@ block main
   main.page-main
     h1.visually-hidden Путешествия вместе с "Погнали?"
     section.intro
-      p._title
-        strong В путешествие с крутыми попутчиками!
+      p._title В путешествие с крутыми попутчиками!
       ul._list
         li._item
-          a._phone(href="tel:88005558628") 8 800 555-86-28
+          a._link.-phone(href="tel:88005558628")
+            span.visually-hidden 8 800 555-86-28
         li._item
-          a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+          a._link.-mail(href="mailto:mail@htmlacademy.ru")
+            span.visually-hidden mail@htmlacademy.ru
         li._item
-          a._login(href="#") Авторизация
+          a._link.-login(href="#") Авторизация
       figure._text
         blockquote._quote «Лучшее приложение, что я видел в жизни!»
         figcaption._author Мурат Эльтазин главный редактор газеты «гаджетлайф»
@@ -33,32 +34,35 @@ block main
       h2._title Направления
       p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
       ul.list-country._list
-        li.country-card
+        li._item.-thailand
           img._pic(src="img/thailand.png", width="35", height="24", alt="Таиланд.")
-          ._wrapper
-            h3._title Таиланд
-            p._description Джунгли зовут!
-          p._count
-            span.visually-hidden="Попутчиков"
-            | 18321
-        li.country-card
+          ._inner
+            ._wrapper
+              h3._title Таиланд
+              p._description Джунгли зовут!
+            p._count
+              span.visually-hidden="Попутчиков"
+              | 18321
+        li._item.-france
           img._pic(src="img/france.png", width="35", height="24", alt="Франция.")
-          ._wrapper
-            h3._title Франция
-            p._description Трэ бьен, манифик!
-          p._count
-            span.visually-hidden="Попутчиков"
-            | 12518
-        li.country-card
+          ._inner
+            ._wrapper
+              h3._title Франция
+              p._description Трэ бьен, манифик!
+            p._count
+              span.visually-hidden="Попутчиков"
+              | 12518
+        li._item.-czech
           img._pic(src="img/czech.png", width="35", height="24", alt="Чехия.")
-          ._wrapper
-            h3._title Чехия
-            p._description Закоулки старой Европы
-          p._count
-            span.visually-hidden="Попутчиков"
-            | 5326
+          ._inner
+            ._wrapper
+              h3._title Чехия
+              p._description Закоулки старой Европы
+            p._count
+              span.visually-hidden="Попутчиков"
+              | 5326
       a.button(href="form.html") Показать все
-    section.companion
+    section.travelers
       h2._title Попутчики
       p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
       p._slogan Теперь можно легко найти единомышленников!
@@ -69,7 +73,7 @@ block main
             label.level._level(lang="en") level
               meter(value=user.level, max=100)
           ._info
-            ul.country-list._country
+            ul._country
               each country in user.countries
                 li._item
                   img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
@@ -85,7 +89,7 @@ block main
       a.button(href="catalog.html" aria-label="Показать всех.") Показать всех
     section.profile
       ._wrapper
-        h2.title Добавьте свой профиль
+        h2._title Добавьте свой профиль
         img(src="img/rates.png", width="100", height="100" alt="Ставки.")
       ol.pricing-list._pricing
         li._item
@@ -101,16 +105,16 @@ block main
     section.interested
       h2._title Заинтересовались?
       p._description Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-        a._link авторизуйтесь
+        a._link.-login авторизуйтесь
         | .
       form._mail(action="https://echo.htmlacademy.ru" method="post")
         label.visually-hidden(for="email") Email
         input._field(type="email" id="email" name="email" placeholder="E-mail" required)
-        button._button(type="submit") Регистрация.
-      p._question Остались вопросы? Мы с радостью на них ответим!
+        button._button.visually-hidden(type="submit") Регистрация.
+      p._question Остались вопросы?<br> Мы с радостью на них ответим!
       address._wrapper
-        a._phone(href="tel:88005558628") 8 800 555-86-28
-        a._mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
+        a._link.-phone(href="tel:88005558628") 8 800 555-86-28
+        a._link.-mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
   footer.page-footer
     section.navigation
       address._address

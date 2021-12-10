@@ -1,0 +1,34 @@
+.init-font(@name, @file, @weight: 400, @style: normal) {
+  @font-face {
+    font-family: @name;
+    src: url("../fonts/@{file}.woff2");
+    font-style: @style;
+    font-display: swap;
+    font-weight: @weight;
+  }
+}
+
+.init-font("Bloger-Sans", "bloggersans-light", 300);
+.init-font("Bloger-Sans", "bloggersans");
+.init-font("Bloger-Sans", "bloggersans-medium", 500);
+.init-font("Bloger-Sans", "bloggersans-bold", 700);
+.init-font("Bloger-Sans", "bloggersans-lightitalic", 300, italic);
+.init-font("Bloger-Sans", "bloggersans-italic", 400, italic);
+.init-font("Bloger-Sans", "bloggersans-mediumitalic", 500, italic);
+.init-font("Bloger-Sans", "bloggersans-bolditalic", 700, italic);
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
