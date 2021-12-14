@@ -1,5 +1,21 @@
 .travelers {
+  display: flex;
+  flex-direction: column;
   background-color: #192144;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.travelers__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .travelers__title {
@@ -17,4 +33,18 @@
 .travelers__slogan {
   font-weight: 700;
   color: #ffffff;
+}
+
+.travelers .travelers__desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.travelers .travelers__show {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

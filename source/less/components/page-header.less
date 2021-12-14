@@ -1,8 +1,20 @@
 .page-header {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: @basic-blue;
   color: #192144;
+  padding: 20px 25px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: stretch;
+    padding: 46px 60px;
+  }
 }
 
 .page-header__logo {
@@ -38,5 +50,54 @@
     width: 128px;
     height: 19px;
     padding-top: 12px;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  margin-top: -5.5px;
+  z-index: 2;
+  display: block;
+  width: 25px;
+  height: 11px;
+  cursor: pointer;
+  background-color: initial;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+  }
+
+  &::after {
+    top: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 50%;
+    margin-left: -12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 300px;
+    top: 74px;
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    cursor: initial;
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 }

@@ -1,8 +1,11 @@
 .site-list {
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
 
   @media (min-width: @desktop-width) {
+    display: flex;
     flex-direction: row;
   }
 }
@@ -11,8 +14,10 @@
   display: block;
   text-decoration: none;
   font-family: inherit;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: 500;
-  color: #192144;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 21px;
 }

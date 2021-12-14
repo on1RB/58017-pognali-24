@@ -1,6 +1,32 @@
 .profile {
+  position: relative;
   display: flex;
   flex-direction: column;
+  background-color: @basic-grey;
+  height: 500px;
+
+  @media (min-width: @tablet-width) {
+    height: 600px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 800px;
+  }
+}
+
+.profile__pic {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 85px;
+    bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 133px;
+    bottom: 265px;
+  }
 }
 
 .profile__wrapper {

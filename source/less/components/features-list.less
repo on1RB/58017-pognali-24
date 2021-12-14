@@ -1,8 +1,41 @@
 .features-list {
   flex-direction: column;
   color: @basic-blue;
-  background-color: #ffa530;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.features-list__item {
+  box-sizing: border-box;
+  padding: 22px 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 32px;
+    font-size: 24px;
+    line-height: 24px;
+    width: 344px;
+  }
+
+  &:nth-child(1) {
+    background-color: @special-orange;
+  }
+
+  &:nth-child(2) {
+    background-color: #FFA530;
+  }
+
+  &:nth-child(3) {
+    background-color: #FFBD30;
+  }
+
+  &:nth-child(4) {
+    background-color: @basic-yellow;
+  }
 }
