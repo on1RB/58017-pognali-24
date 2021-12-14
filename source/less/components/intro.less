@@ -3,15 +3,37 @@
   background-color: @basic-blue;
   background-image: url("../img/bg-main-mobile.png");
   background-repeat: no-repeat;
+  padding: 20px 25px;
 
   &::before {
     content: "";
     position: absolute;
-    right: 0;
+    right: 15%;
     width: 192px;
     height: 255px;
     background-image: url("../img/traveller-mobile.png");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 40px;
+
+    &::before {
+      width: 372px;
+      height: 451px;
+      background-image: url("../img/traveller-tablet.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 60px;
+
+    &::before {
+      right: 28%;
+      width: 431px;
+      height: 640px;
+      background-image: url("../img/traveller-desktop.png");
+    }
   }
 }
 
@@ -21,6 +43,12 @@
   line-height: 40px;
   font-weight: 700;
   color: #ffffff;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
 }
 
 .intro__list {

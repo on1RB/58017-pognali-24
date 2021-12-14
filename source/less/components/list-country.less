@@ -7,34 +7,41 @@
 }
 
 .list-country__item {
-  position: relative;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 
-  &--thailand {
-    background-color: #02667e;
-    background-image: url("../img/bg-thailand-mobile.png");
-  }
-
-  &--france {
-    background-color: #fdf7f9;
-    background-image: url("../img/bg-france-mobile.png");
-  }
-
-  &--czech {
-    background-color: #dee2ea;
-    background-image: url("../img/bg-czech-mobile.png");
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
   }
 }
 
 .list-country__pic {
-  position: absolute;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+}
+
+.list-country__flag {
+  display: block;
+  margin-top: -10px;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+    order: 2;
+  }
 }
 
 .list-country__inner {
-  margin-top: 99px;
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .list-country__wrapper {

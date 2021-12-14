@@ -1,5 +1,17 @@
 .direction {
+  display: flex;
+  flex-direction: column;
   background-color: @basic-grey;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.direction__list {
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
 }
 
 .direction__title {
@@ -12,4 +24,27 @@
 
 .direction__description {
   margin: 0;
+}
+
+.direction__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+
+.direction .direction__button-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.direction .direction__button-show {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

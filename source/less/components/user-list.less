@@ -1,16 +1,32 @@
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
 .user-list__link {
-  display: block;
+  display: none;
   text-decoration: none;
   font-family: inherit;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  color: #192144;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic-blue;
   text-transform: uppercase;
 
   &--login {
-    color: @basic-blue;
-    font-size: 17px;
-    line-height: 30px;
+    background-color: @basic-yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--login {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }

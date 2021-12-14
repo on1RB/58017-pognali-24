@@ -31,11 +31,14 @@ block main
       p._description Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
       p._slogan А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
     section.direction
-      h2._title Направления
-      p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+      ._wrapper
+        h2._title Направления
+        p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+        a.button._button-desktop(href="form.html") Показать все
       ul.list-country._list
         li._item.-thailand
-          img._pic(src="img/thailand.png", width="35", height="24", alt="Таиланд.")
+          img._pic(src="img/bg-thailand-mobile.png", width="270", height="110", alt="Пляж Тайланда.")
+          img._flag(src="img/thailand.png", width="35", height="24", alt="Флаг Таиланда.")
           ._inner
             ._wrapper
               h3._title Таиланд
@@ -44,7 +47,8 @@ block main
               span.visually-hidden="Попутчиков"
               | 18321
         li._item.-france
-          img._pic(src="img/france.png", width="35", height="24", alt="Франция.")
+          img._pic(src="img/bg-france-mobile.png", width="270", height="110", alt="Город Франции.")
+          img._flag(src="img/france.png", width="35", height="24", alt="Флаг Франции.")
           ._inner
             ._wrapper
               h3._title Франция
@@ -53,7 +57,8 @@ block main
               span.visually-hidden="Попутчиков"
               | 12518
         li._item.-czech
-          img._pic(src="img/czech.png", width="35", height="24", alt="Чехия.")
+          img._pic(src="img/bg-czech-mobile.png", width="270", height="110", alt="Море Чехии.")
+          img._flag(src="img/czech.png", width="35", height="24", alt="Флаг Чехии.")
           ._inner
             ._wrapper
               h3._title Чехия
@@ -61,36 +66,39 @@ block main
             p._count
               span.visually-hidden="Попутчиков"
               | 5326
-      a.button(href="form.html") Показать все
+      a.button._button-show(href="form.html") Показать все
     section.travelers
-      h2._title Попутчики
-      p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-      p._slogan Теперь можно легко найти единомышленников!
-      each user in [users[0], users[1]]
-        .user-card
-          ._inner
-            img._photo(src=`img/${user.userPhoto}.png`, alt=user.userAlt)
-            label.level._level(lang="en") level
-              meter(value=user.level, max=100)
-          ._info
-            ul._country
-              each country in user.countries
-                li._item
-                  img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
-            h3._name=user.name + ' ' + user.surname
-            ul.hashtag-list._list
-              each tag in user.hashtag
-                li._item
-                  a(href="")._link=tag
-            ul.hobby-list._hobby
-              each isLiked, hobby in user.hobbies
-                li._item
-                  img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
-      a.button(href="catalog.html" aria-label="Показать всех.") Показать всех
+      ._box
+        h2._title Попутчики
+        p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+        p._slogan Теперь можно легко найти единомышленников!
+        a.button._desktop(href="catalog.html" aria-label="Показать всех.") Показать всех
+      ._wrapper
+        each user in [users[0], users[1]]
+          .user-card
+            ._inner
+              img._photo(src=`img/${user.userPhoto}.png`, alt=user.userAlt)
+              label.level._level(lang="en") level
+                meter(value=user.level, max=100)
+            ._info
+              ul._country
+                each country in user.countries
+                  li._item
+                    img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
+              h3._name=user.name + ' ' + user.surname
+              ul.hashtag-list._list
+                each tag in user.hashtag
+                  li._item
+                    a(href="")._link=tag
+              ul.hobby-list._hobby
+                each isLiked, hobby in user.hobbies
+                  li._item
+                    img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
+      a.button._show(href="catalog.html" aria-label="Показать всех.") Показать всех
     section.profile
       ._wrapper
         h2._title Добавьте свой профиль
-        img(src="img/rates.png", width="100", height="100" alt="Ставки.")
+        img._pic(src="img/rates.png", width="100", height="100" alt="Ставки.")
       ol.pricing-list._pricing
         li._item
           p._description Базовое размещение

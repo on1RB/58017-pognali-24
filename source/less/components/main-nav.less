@@ -1,18 +1,14 @@
 .main-nav {
-  background-color: #ffffff;
-}
+  display: none;
 
-.main-nav__wrapper {
-  display: flex;
-  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
+    width: 975px;
+    margin-left: 145px;
   }
-}
-
-.main-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }

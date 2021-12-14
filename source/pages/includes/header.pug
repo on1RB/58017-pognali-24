@@ -1,29 +1,24 @@
 header.page-header
   a._logo
     img._image(src="img/main-logo.svg", width="96", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
+  button._toggle(type="button")
+    span.visually-hidden Открыть меню.
   nav.main-nav
-    button._toggle(type="button")
-      span.visually-hidden Открыть меню.
-    ._wrapper
-      ul.site-list._list
-        each link in navLinks
-          if link.href === location
-            li._item.-active
-              a._link=link.text
-          else
-            li._item
-              a._link(href=link.href)=link.text
-      ul.user-list._list
-        li._item
-          a._link.-login Авторизация
-        li._item
-          a._link.-phone(href="tel:88005558628") 8 800 555-86-28
-        li._item
-          a._link.-mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-      ul.social-list._list
-        li._item
-          a._link.-fb(href="https://www.facebook.com/htmlacademy", aria-label="Фейсбук.")
-        li._item
-          a._link.-vk(href="https://vk.com/htmlacademy", aria-label="ВКонтакте.")
-        li._item
-          a._link.-inst(href="https://www.instagram.com/htmlacademy/", aria-label="Инстаграм.")
+    ul.site-list._list
+      each link in navLinks
+        if link.href === location
+          li._item.-active
+            a._link=link.text
+        else
+          li._item
+            a._link(href=link.href)=link.text
+    ul.user-list._list
+      li._item
+        a._link.-phone(href="tel:88005558628")
+          span.visually-hidden 8 800 555-86-28
+      li._item
+        a._link.-mail(href="mailto:mail@htmlacademy.ru")
+          span.visually-hidden mail@htmlacademy.ru
+      li._item
+        a._link.-login Авторизация
+  include menu
