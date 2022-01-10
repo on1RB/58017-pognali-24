@@ -9,26 +9,39 @@
   </head>
   <body class="page__body">
     <header class="page-header"><a class="page-header__logo"><img class="page-header__image" src="img/main-logo.svg" width="96" height="15" alt="Логотип сайта путешествий 'Погнали?'."></a>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="site-list main-nav__list">
-            <li class="site-list__item site-list__item--active"><a class="site-list__link">О сервисе</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
-          </ul>
-          <ul class="user-list main-nav__list">
-            <li class="user-list__item"><a class="user-list__link user-list__link--login">Авторизация</a></li>
-            <li class="user-list__item"><a class="user-list__link user-list__link--phone" href="tel:88005558628">8 800 555-86-28</a></li>
-            <li class="user-list__item"><a class="user-list__link user-list__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-          </ul>
-          <ul class="social-list main-nav__list">
-            <li class="social-list__item"><a class="social-list__link social-list__link--fb" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук."></a></li>
-            <li class="social-list__item"><a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a></li>
-            <li class="social-list__item"><a class="social-list__link social-list__link--inst" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм."></a></li>
-          </ul>
-        </div>
+        <ul class="site-list main-nav__list">
+          <li class="site-list__item site-list__item--active"><a class="site-list__link">О сервисе</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
+        </ul>
+        <ul class="user-list main-nav__list">
+          <li class="user-list__item"><a class="user-list__link user-list__link--phone" href="tel:88005558628"><span class="visually-hidden">8 800 555-86-28</span></a></li>
+          <li class="user-list__item"><a class="user-list__link user-list__link--mail" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a></li>
+          <li class="user-list__item"><a class="user-list__link user-list__link--login">Авторизация</a></li>
+        </ul>
       </nav>
+      <div class="main-menu">
+        <div class="main-menu__wrapper"><a class="main-menu__logo"><img class="main-menu__image" src="img/main-logo.svg" width="96" height="15" alt="Логотип сайта путешествий 'Погнали?'."></a>
+          <button class="main-menu__toggle" type="button"><span class="visually-hidden">Закрыть меню.</span></button><a class="main-menu__auth">Авторизация</a>
+        </div>
+        <ul class="main-menu__navigation">
+          <li class="main-menu__navigation-item main-menu__navigation-item--active"><a class="main-menu__link">О сервисе</a></li>
+          <li class="main-menu__navigation-item"><a class="main-menu__link" href="form.html">Направления</a></li>
+          <li class="main-menu__navigation-item"><a class="main-menu__link" href="catalog.html">Попутчики</a></li>
+        </ul>
+        <ul class="main-menu__user">
+          <li class="main-menu__user-item"><a class="main-menu__link main-menu__link--login">Авторизация</a></li>
+          <li class="main-menu__user-item"><a class="main-menu__link main-menu__link--phone" href="tel:88005558628">8 800 555-86-28</a></li>
+          <li class="main-menu__user-item"><a class="main-menu__link main-menu__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+        </ul>
+        <ul class="social-list main-menu__list">
+          <li class="social-list__item"><a class="social-list__link social-list__link--fb" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук."></a></li>
+          <li class="social-list__item"><a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a></li>
+          <li class="social-list__item"><a class="social-list__link social-list__link--inst" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм."></a></li>
+        </ul>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Путешествия вместе с "Погнали?"</h1>
@@ -56,10 +69,12 @@
         <p class="about__slogan">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
       </section>
       <section class="direction">
-        <h2 class="direction__title">Направления</h2>
-        <p class="direction__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <div class="direction__wrapper">
+          <h2 class="direction__title">Направления</h2>
+          <p class="direction__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p><a class="button direction__button-desktop" href="form.html">Показать все</a>
+        </div>
         <ul class="list-country direction__list">
-          <li class="list-country__item list-country__item--thailand"><img class="list-country__pic" src="img/thailand.png" width="35" height="24" alt="Таиланд.">
+          <li class="list-country__item list-country__item--thailand"><img class="list-country__pic" src="img/bg-thailand-mobile.png" width="270" height="110" alt="Пляж Тайланда."><img class="list-country__flag" src="img/thailand.png" width="35" height="24" alt="Флаг Таиланда.">
             <div class="list-country__inner">
               <div class="list-country__wrapper">
                 <h3 class="list-country__title">Таиланд</h3>
@@ -68,7 +83,7 @@
               <p class="list-country__count"><span class="visually-hidden">Попутчиков</span>18321</p>
             </div>
           </li>
-          <li class="list-country__item list-country__item--france"><img class="list-country__pic" src="img/france.png" width="35" height="24" alt="Франция.">
+          <li class="list-country__item list-country__item--france"><img class="list-country__pic" src="img/bg-france-mobile.png" width="270" height="110" alt="Город Франции."><img class="list-country__flag" src="img/france.png" width="35" height="24" alt="Флаг Франции.">
             <div class="list-country__inner">
               <div class="list-country__wrapper">
                 <h3 class="list-country__title">Франция</h3>
@@ -77,7 +92,7 @@
               <p class="list-country__count"><span class="visually-hidden">Попутчиков</span>12518</p>
             </div>
           </li>
-          <li class="list-country__item list-country__item--czech"><img class="list-country__pic" src="img/czech.png" width="35" height="24" alt="Чехия.">
+          <li class="list-country__item list-country__item--czech"><img class="list-country__pic" src="img/bg-czech-mobile.png" width="270" height="110" alt="Море Чехии."><img class="list-country__flag" src="img/czech.png" width="35" height="24" alt="Флаг Чехии.">
             <div class="list-country__inner">
               <div class="list-country__wrapper">
                 <h3 class="list-country__title">Чехия</h3>
@@ -86,72 +101,76 @@
               <p class="list-country__count"><span class="visually-hidden">Попутчиков</span>5326</p>
             </div>
           </li>
-        </ul><a class="button" href="form.html">Показать все</a>
+        </ul><a class="button direction__button-show" href="form.html">Показать все</a>
       </section>
       <section class="travelers">
-        <h2 class="travelers__title">Попутчики</h2>
-        <p class="travelers__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="travelers__slogan">Теперь можно легко найти единомышленников!</p>
-        <div class="user-card">
-          <div class="user-card__inner"><img class="user-card__photo" src="img/firsova.png" alt="Фото Тани Фирсовой">
-            <label class="level user-card__level" lang="en">level
-              <meter value="99" max="100"></meter>
-            </label>
-          </div>
-          <div class="user-card__info">
-            <ul class="user-card__country">
-              <li class="user-card__item"><img src="img/sri-lanka.png" alt="Шри-Ланка"></li>
-              <li class="user-card__item"><img src="img/thailand.png" alt="Таиланд"></li>
-              <li class="user-card__item"><img src="img/seychelles.png" alt="Сейшелы"></li>
-            </ul>
-            <h3 class="user-card__name">Таня Фирсова</h3>
-            <ul class="hashtag-list user-card__list">
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#ЗОЖ</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#ПП</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#Фитнес</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#пляж</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#авокадо</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#смузи</a></li>
-            </ul>
-            <ul class="hobby-list user-card__hobby">
-              <li class="hobby-list__item"><img src="img/plane.svg" alt="Любит авиаперевозки."></li>
-              <li class="hobby-list__item"><img src="img/bus.svg" alt="Не любит автобусные путешествия."></li>
-              <li class="hobby-list__item"><img src="img/bicycle.svg" alt="Не любит кататься на велосипеде."></li>
-              <li class="hobby-list__item"><img src="img/run.svg" alt="Не любит пешие прогулки."></li>
-            </ul>
-          </div>
+        <div class="travelers__box">
+          <h2 class="travelers__title">Попутчики</h2>
+          <p class="travelers__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="travelers__slogan">Теперь можно легко найти единомышленников!</p><a class="button travelers__desktop" href="catalog.html" aria-label="Показать всех.">Показать всех</a>
         </div>
-        <div class="user-card">
-          <div class="user-card__inner"><img class="user-card__photo" src="img/demin.png" alt="Фото Пети Демина">
-            <label class="level user-card__level" lang="en">level
-              <meter value="80" max="100"></meter>
-            </label>
+        <div class="travelers__wrapper">
+          <div class="user-card">
+            <div class="user-card__inner"><img class="user-card__photo" src="img/firsova.png" alt="Фото Тани Фирсовой">
+              <label class="level user-card__level" lang="en">level
+                <meter value="99" max="100"></meter>
+              </label>
+            </div>
+            <div class="user-card__info">
+              <ul class="user-card__country">
+                <li class="user-card__item"><img src="img/sri-lanka.png" alt="Шри-Ланка"></li>
+                <li class="user-card__item"><img src="img/thailand.png" alt="Таиланд"></li>
+                <li class="user-card__item"><img src="img/seychelles.png" alt="Сейшелы"></li>
+              </ul>
+              <h3 class="user-card__name">Таня Фирсова</h3>
+              <ul class="hashtag-list user-card__list">
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#ЗОЖ</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#ПП</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#Фитнес</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#пляж</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#авокадо</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#смузи</a></li>
+              </ul>
+              <ul class="hobby-list user-card__hobby">
+                <li class="hobby-list__item"><img src="img/plane.svg" alt="Любит авиаперевозки."></li>
+                <li class="hobby-list__item"><img src="img/bus.svg" alt="Не любит автобусные путешествия."></li>
+                <li class="hobby-list__item"><img src="img/bicycle.svg" alt="Не любит кататься на велосипеде."></li>
+                <li class="hobby-list__item"><img src="img/run.svg" alt="Не любит пешие прогулки."></li>
+              </ul>
+            </div>
           </div>
-          <div class="user-card__info">
-            <ul class="user-card__country">
-              <li class="user-card__item"><img src="img/belgium.png" alt="Бельгия"></li>
-              <li class="user-card__item"><img src="img/czech.png" alt="Чехия"></li>
-            </ul>
-            <h3 class="user-card__name">Петя Демин</h3>
-            <ul class="hashtag-list user-card__list">
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#бургер</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#бар</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#футбол</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#концерт</a></li>
-              <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#крафт</a></li>
-            </ul>
-            <ul class="hobby-list user-card__hobby">
-              <li class="hobby-list__item"><img src="img/plane.svg" alt="Любит авиаперевозки."></li>
-              <li class="hobby-list__item"><img src="img/bus.svg" alt="Любит автобусные путешествия."></li>
-              <li class="hobby-list__item"><img src="img/bicycle.svg" alt="Не любит кататься на велосипеде."></li>
-              <li class="hobby-list__item"><img src="img/run.svg" alt="Любит пешие прогулки."></li>
-            </ul>
+          <div class="user-card">
+            <div class="user-card__inner"><img class="user-card__photo" src="img/demin.png" alt="Фото Пети Демина">
+              <label class="level user-card__level" lang="en">level
+                <meter value="80" max="100"></meter>
+              </label>
+            </div>
+            <div class="user-card__info">
+              <ul class="user-card__country">
+                <li class="user-card__item"><img src="img/belgium.png" alt="Бельгия"></li>
+                <li class="user-card__item"><img src="img/czech.png" alt="Чехия"></li>
+              </ul>
+              <h3 class="user-card__name">Петя Демин</h3>
+              <ul class="hashtag-list user-card__list">
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#бургер</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#бар</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#футбол</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#концерт</a></li>
+                <li class="hashtag-list__item"><a class="hashtag-list__link" href="">#крафт</a></li>
+              </ul>
+              <ul class="hobby-list user-card__hobby">
+                <li class="hobby-list__item"><img src="img/plane.svg" alt="Любит авиаперевозки."></li>
+                <li class="hobby-list__item"><img src="img/bus.svg" alt="Любит автобусные путешествия."></li>
+                <li class="hobby-list__item"><img src="img/bicycle.svg" alt="Не любит кататься на велосипеде."></li>
+                <li class="hobby-list__item"><img src="img/run.svg" alt="Любит пешие прогулки."></li>
+              </ul>
+            </div>
           </div>
-        </div><a class="button" href="catalog.html" aria-label="Показать всех.">Показать всех</a>
+        </div><a class="button travelers__show" href="catalog.html" aria-label="Показать всех.">Показать всех</a>
       </section>
       <section class="profile">
         <div class="profile__wrapper">
-          <h2 class="profile__title">Добавьте свой профиль</h2><img src="img/rates.png" width="100" height="100" alt="Ставки.">
+          <h2 class="profile__title">Добавьте свой профиль</h2><img class="profile__pic" src="img/rates.png" width="100" height="100" alt="Ставки.">
         </div>
         <ol class="pricing-list profile__pricing">
           <li class="pricing-list__item">

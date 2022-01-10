@@ -9,26 +9,39 @@
   </head>
   <body class="page__body">
     <header class="page-header"><a class="page-header__logo"><img class="page-header__image" src="img/main-logo.svg" width="96" height="15" alt="Логотип сайта путешествий 'Погнали?'."></a>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="site-list main-nav__list">
-            <li class="site-list__item"><a class="site-list__link" href="index.html">О сервисе</a></li>
-            <li class="site-list__item site-list__item--active"><a class="site-list__link">Направления</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
-          </ul>
-          <ul class="user-list main-nav__list">
-            <li class="user-list__item"><a class="user-list__link user-list__link--login">Авторизация</a></li>
-            <li class="user-list__item"><a class="user-list__link user-list__link--phone" href="tel:88005558628">8 800 555-86-28</a></li>
-            <li class="user-list__item"><a class="user-list__link user-list__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
-          </ul>
-          <ul class="social-list main-nav__list">
-            <li class="social-list__item"><a class="social-list__link social-list__link--fb" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук."></a></li>
-            <li class="social-list__item"><a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a></li>
-            <li class="social-list__item"><a class="social-list__link social-list__link--inst" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм."></a></li>
-          </ul>
-        </div>
+        <ul class="site-list main-nav__list">
+          <li class="site-list__item"><a class="site-list__link" href="index.html">О сервисе</a></li>
+          <li class="site-list__item site-list__item--active"><a class="site-list__link">Направления</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
+        </ul>
+        <ul class="user-list main-nav__list">
+          <li class="user-list__item"><a class="user-list__link user-list__link--phone" href="tel:88005558628"><span class="visually-hidden">8 800 555-86-28</span></a></li>
+          <li class="user-list__item"><a class="user-list__link user-list__link--mail" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a></li>
+          <li class="user-list__item"><a class="user-list__link user-list__link--login">Авторизация</a></li>
+        </ul>
       </nav>
+      <div class="main-menu">
+        <div class="main-menu__wrapper"><a class="main-menu__logo"><img class="main-menu__image" src="img/main-logo.svg" width="96" height="15" alt="Логотип сайта путешествий 'Погнали?'."></a>
+          <button class="main-menu__toggle" type="button"><span class="visually-hidden">Закрыть меню.</span></button><a class="main-menu__auth">Авторизация</a>
+        </div>
+        <ul class="main-menu__navigation">
+          <li class="main-menu__navigation-item"><a class="main-menu__link" href="index.html">О сервисе</a></li>
+          <li class="main-menu__navigation-item main-menu__navigation-item--active"><a class="main-menu__link">Направления</a></li>
+          <li class="main-menu__navigation-item"><a class="main-menu__link" href="catalog.html">Попутчики</a></li>
+        </ul>
+        <ul class="main-menu__user">
+          <li class="main-menu__user-item"><a class="main-menu__link main-menu__link--login">Авторизация</a></li>
+          <li class="main-menu__user-item"><a class="main-menu__link main-menu__link--phone" href="tel:88005558628">8 800 555-86-28</a></li>
+          <li class="main-menu__user-item"><a class="main-menu__link main-menu__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+        </ul>
+        <ul class="social-list main-menu__list">
+          <li class="social-list__item"><a class="social-list__link social-list__link--fb" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук."></a></li>
+          <li class="social-list__item"><a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a></li>
+          <li class="social-list__item"><a class="social-list__link social-list__link--inst" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм."></a></li>
+        </ul>
+      </div>
     </header>
     <main class="form-main">
       <h1 class="visually-hidden">Выберите направление и "Погнали?"</h1>
