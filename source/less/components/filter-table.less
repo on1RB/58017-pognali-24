@@ -1,13 +1,78 @@
 .filter-table {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
 }
 
 .filter-table__letter {
+  margin: 0;
+  padding-left: 16px;
+  padding-right: 17px;
+  padding-top: 12px;
+  padding-bottom: 15px;
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   color: @basic-blue-light;
   text-transform: uppercase;
+  border: none;
+  display: block;
+  width: 100%;
+  background: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 18.6px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--active {
+      color: #ffffff;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 21px;
+  }
+}
+
+.filter-table__col {
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid #cbced9;
+  background-color: #ffffff;
+  border-top: none;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid #cbced9;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 16px;
+    margin-bottom: 14px;
+    width: 60px;
+    height: 70px;
+  }
+
+  &--active {
+    background-color: #edeff6;
+    border-bottom: 1px solid #edeff6;
+
+    @media (min-width: @tablet-width) {
+      background-color: @basic-blue-light;
+    }
+  }
 }

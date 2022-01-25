@@ -1,0 +1,64 @@
+.catalog-filter-table {
+  display: grid;
+  grid-template-columns: 44px 44px 44px 44px 44px;
+  gap: 1px;
+  background: #cbced9;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 1px;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    background: #e2e5f2;
+    padding: 0;
+    margin: 0;
+    row-gap: 24px;
+    column-gap: 33px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 207px;
+  }
+}
+
+.catalog-filter-table__letter {
+  margin: 0;
+  background-color: #ffffff;
+  padding-left: 16px;
+  padding-right: 17px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  border: none;
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    color: #192144;
+    opacity: 0.3;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 0;
+    background: none;
+  }
+
+  &--active {
+    color: #ffffff;
+    background-color: @basic-blue-light;
+    margin-right: -1px;
+    margin-bottom: -1px;
+
+    @media (min-width: @tablet-width) {
+      background: none;
+      margin: 0;
+      color: #192144;
+      opacity: 1;
+    }
+  }
+}

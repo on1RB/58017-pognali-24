@@ -12,35 +12,59 @@ block main
       ._wrapper
         label.level._level(lang="en") level
           meter(value=80, max=100)
-        img(src="img/demin-avatar-100x100.png", alt="Ваше фото.")
-      a._change-photo(href="#" download) Сменить фото
-      fieldset._tags
-        legend._hashtag-title Тэги
-        ul.tags-list._tags
-          each user in [users[1]]
-              each tag in user.hashtag
-                li._item
-                  a(href="")._link=tag
-      fieldset._activity
-        legend._transport Транспорт
-        ul.hobby-list._hobby
-          each user in [users[1]]
-            each isLiked, hobby in user.hobbies
-              li._item
-                img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
+        picture
+          source(media="(min-width: 1440px)", width="190px", height="190px", srcset="img/demin-avatar-190x190.png")
+          source(media="(min-width: 768px)", width="94px", height="94px", srcset="img/demin-avatar-94x94.png")
+          img(src="img/demin-avatar-100x100.png", width="100px", height="100px", alt="Ваше фото.")
+      a._change-photo(href="#" download)
+        span._change Сменить
+        |фото
+      ._inner
+        fieldset._tags
+          legend._hashtag-title Тэги
+          ul.tags-list._list
+            each user in [users[1]]
+                each tag in user.hashtag
+                  li._item
+                    a(href="")._link=tag
+        fieldset._activity
+          legend._transport Транспорт
+          ul.transport-list.-form._list
+            li._item
+              label._control
+                input._input.visually-hidden(type="checkbox" name="plane" checked disabled)
+                span._mark.-plane
+                span._label.visually-hidden Авиаперевозки
+            li._item
+              label._control
+                input._input.visually-hidden(type="checkbox" name="bus" checked disabled)
+                span._mark.-bus
+                span._label.visually-hidden Автобусные путешествия
+            li._item
+              label._control
+                input._input.visually-hidden(type="checkbox" name="bicycle" disabled)
+                span._mark.-bicycle
+                span._label.visually-hidden Кататься на велосипеде
+            li._item
+              label._control
+                input._input.visually-hidden(type="checkbox" name="run" checked disabled)
+                span._mark.-run
+                span._label.visually-hidden Пешие прогулки
     section.plans
       h3._title Мои планы:
       ol.travel-list._list
         li._item
           strong._title Франция, Италия
-          p._count 3 попутчика
-          span._date 26 мар — 29 мар
-          a._button Изменить
+          ._wrapper
+            p._count 3 попутчика
+            span._date 26 мар — 29 мар
+            a._button Изменить
         li._item
           strong._title Таиланд, Индонезия
-          p._count 1 попутчика
-          span._date 1 июл — 15 июл
-          a._button Изменить
+          ._wrapper
+            p._count 1 попутчик
+            span._date 1 июл — 15 июл
+            a._button Изменить
     section.add-plans
       ._wrapper
         h3._title Добавить план:

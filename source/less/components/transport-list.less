@@ -2,6 +2,213 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
+  display: none;
   flex-direction: row;
+  margin-bottom: 21px;
+
+  &--active {
+    display: flex;
+  }
+
+  &--form {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  &--user {
+    display: flex;
+    padding-top: 6px;
+    margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 7px;
+      flex-direction: column;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.transport-list--form .transport-list__item {
+  margin-right: 0.5px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.transport-list--user .transport-list__item {
+  margin-right: 1px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    margin-left: 111px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.transport-list__item {
+  margin-right: 2px;
+}
+
+.transport-list__control {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+
+    &--user-card {
+      width: 23px;
+      height: 22px;
+    }
+  }
+}
+
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--plane::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--plane::before,
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--bus::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--bus::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--bicycle::before,
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--bicycle::before,
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--run::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--run::before {
+  position: absolute;
+  content: "";
+  width: 16.73px;
+  height: 16px;
+  background-repeat: no-repeat;
+  top: 8px;
+  left: 7.27px;
+  opacity: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 22px;
+    top: 11px;
+    left: 10px;
+  }
+}
+
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before {
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 0;
+  }
+}
+
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--plane::before {
+  background-image: url("../img/icon-plane-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-plane.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"] + .transport-list__mark--plane::before {
+  background-image: url("../img/icon-plane-mobile.svg");
+  opacity: 0.15;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-plane.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--bus::before {
+  background-image: url("../img/icon-bus-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-bus.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"] + .transport-list__mark--bus::before {
+  background-image: url("../img/icon-bus-mobile.svg");
+  opacity: 0.15;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-bus.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--bicycle::before {
+  background-image: url("../img/icon-bicycle-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-bicycle.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"] + .transport-list__mark--bicycle::before {
+  background-image: url("../img/icon-bicycle-mobile.svg");
+  opacity: 0.15;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-bicycle.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"]:checked + .transport-list__mark--run::before {
+  background-image: url("../img/icon-run-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-run.svg");
+  }
+}
+
+.transport-list__input[type="checkbox"] + .transport-list__mark--run::before {
+  background-image: url("../img/icon-run-mobile.svg");
+  opacity: 0.15;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-run.svg");
+  }
+}
+
+.transport-list__mark {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+
+  &--user-card {
+    background-color: #edeff6;
+
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 22px;
+      background: none;
+      border-radius: 0;
+    }
+  }
 }

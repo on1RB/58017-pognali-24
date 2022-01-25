@@ -6,8 +6,46 @@
   color: @basic-blue;
   text-transform: uppercase;
   background-color: @basic-yellow;
+  border: none;
+  border-radius: 25px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  &--user {
+    margin-left: 2px;
+    grid-column: 1/3;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 2;
+      grid-row: 3;
+      justify-self: start;
+      margin-left: 29px;
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 16px;
+      padding-bottom: 14px;
+      padding-left: 33px;
+      padding-right: 32px;
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 4px;
+      margin-bottom: 48px;
+    }
+  }
 
   &--bg {
     background-color: #ffffff;
+    padding-bottom: 12px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      padding: 15px 30px;
+    }
   }
 }

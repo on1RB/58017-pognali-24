@@ -2,9 +2,10 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  background: @basic-blue;
+  background: #182044;
   color: #192144;
   padding: 20px 25px;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
@@ -26,6 +27,8 @@
     text-align: right;
     background-image: url("../img/bg-logo-small.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,7 +82,7 @@
   }
 
   &::after {
-    top: 5px;
+    top: 8px;
   }
 
   @media (min-width: @tablet-width) {

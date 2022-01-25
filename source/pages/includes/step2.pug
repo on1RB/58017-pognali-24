@@ -1,12 +1,29 @@
 section.step2
-  p._title Шаг 2.<br> Маршрут
-  p._description Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+  ._flex-block
+    ._container
+      p._title Шаг 2.
+        a._link(href="#")  Маршрут
+      p._description Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+    .container
+      button._toggle(type="button") Даты
+      button._toggle.-current(type="button") Маршрут
+      button._toggle(type="button") Развлечения
   ._wrapper
-    button._close.visually-hidden(type="button") Закрыть
-    button._choice.-active(type="button") Босния и герцеговина
-    button._choice.-active(type="button") Чехия
-    button._choice(type="button") Выберите Страну
+    ._inner
+      button._choice.-active(type="button") Босния и герцеговина
+      ._flag.-first
+      button._close(type="button" aria-label="Закрыть")
+    ._inner
+      button._choice.-active(type="button") Чехия
+      ._flag.-second
+      button._close(type="button" aria-label="Закрыть")
+    ._inner
+      button._choice.-country(type="button") Выберите Страну
+      button._close.-add(type="button" aria-label="Закрыть")
+      button._close.-country(type="button" aria-label="Закрыть")
     include add-country
-    button._add(type="button") Добавить Страну
-  button.step-next(type="button") Следующий шаг
-  button.step-prev(type="button") На шаг назад
+    button._choice.-add(type="button") Добавить Страну
+      span._mark
+  ._flex-container
+    a.step-next._button-next(href="#") Следующий шаг
+    a.step-prev(href="#") На шаг назад

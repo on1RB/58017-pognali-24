@@ -1,8 +1,35 @@
 .step-prev {
+  position: relative;
+  display: block;
   font-family: inherit;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue-light;
+  letter-spacing: 0.01em;
+  background: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: 0;
+    padding-left: 34px;
+    text-transform: none;
+    padding-top: 29px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/triangle-button-prev.svg");
+      background-repeat: no-repeat;
+      left: 0;
+      top: 32px;
+    }
+  }
 }

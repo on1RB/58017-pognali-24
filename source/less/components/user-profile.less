@@ -1,19 +1,195 @@
 .user-profile {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 162px;
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 23px;
+  padding-left: 18px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 190px 285px 153px;
+    padding-top: 32px;
+    padding-left: 35px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 39px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    padding-right: 43px;
+    margin-bottom: 30px;
+    grid-template-columns: 285px  274px 247px;
+    column-gap: 50px;
+  }
 }
 
-.user-profile__box {
+.user-profile__img {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 4px;
+    grid-row: 1/4;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.user-profile__pic {
+  display: block;
+}
+
+.user-profile__like {
+  position: absolute;
   display: flex;
   flex-direction: row;
+  width: 70px;
+  height: 31px;
+  left: 68px;
+  top: 55px;
+
+  @media (min-width: @tablet-width) {
+    width: 105px;
+    height: 50px;
+    left: 405px;
+    top: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 106px;
+    top: 187px;
+    left: 489px;
+  }
+}
+
+.user-profile__input[type="checkbox"]:checked + .user-profile__mark::before,
+.user-profile__input[type="checkbox"] + .user-profile__mark::before {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 31px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: 9px 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+    background-position: 15px 17px;
+  }
+}
+
+.user-profile__input[type="checkbox"] + .user-profile__mark::before {
+  background-color: #e2e5f2;
+  background-image: url("../img/icon-heart.svg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-heart-tablet.svg");
+  }
+}
+
+.user-profile__input[type="checkbox"]:checked + .user-profile__mark::before {
+  background-color: #f9eaea;
+  background-image: url("../img/icon-heart-active.svg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-heart-active-tablet.svg");
+  }
+}
+
+.user-profile__mark {
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin-right: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 7px;
+  }
 }
 
 .user-profile__name {
+  position: relative;
   margin: 0;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   color: @basic-blue-light;
+  padding-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+    padding-left: 33px;
+    margin-bottom: 19px;
+    justify-self: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 12px;
+    padding-top: 44px;
+    margin-bottom: 20px;
+    align-self: start;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #f97676;
+    border-radius: 50%;
+    right: 2px;
+    top: 8px;
+
+    @media (min-width: @tablet-width) {
+      width: 8px;
+      height: 8px;
+      right: -22px;
+      top: 11px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 0;
+      left: -14px;
+      top: 57px;
+    }
+  }
+
+  &--online {
+    &::after {
+      background-color: #bbf085;
+
+      @media (min-width: @tablet-width) {
+        right: -26px;
+      }
+    }
+  }
+}
+
+.user-profile__shift {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .user-profile__count {
@@ -22,9 +198,151 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue;
+  padding-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 16px;
+  }
+}
+
+.user-profile__visit {
+  position: relative;
+  font-size: 15px;
+  line-height: 16px;
+  margin-bottom: 19px;
+  grid-column: 1/3;
+  padding-left: 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 49px;
+    margin-bottom: 17px;
+    grid-column: 1/4;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    left: -18px;
+    top: 8px;
+    background-color: #edeff6;
+
+    @media (min-width: @tablet-width) {
+      width: 71px;
+      left: -35px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 138px;
+    height: 1px;
+    top: 8px;
+    right: -20px;
+    background-color: #edeff6;
+
+    @media (min-width: @tablet-width) {
+      width: 498px;
+      right: -25px;
+    }
+  }
 }
 
 .user-profile__inner {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 3;
+    grid-row: 1/4;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    margin-bottom: 0;
+  }
+
+  &--transport {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+.user-profile__wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+
+  &--hidden {
+    margin-bottom: 10px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.user-profile__transport-text {
+  position: relative;
+  font-size: 15px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-right: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    top: 9px;
+    left: -18px;
+    background-color: #edeff6;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 92px;
+    height: 1px;
+    top: 9px;
+    right: -92px;
+    background-color: #edeff6;
+  }
+}
+
+.user-profile__level-text {
+  position: relative;
+  font-size: 15px;
+  line-height: 16px;
+  padding-right: 2px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    top: 9px;
+    right: -20px;
+    background-color: #edeff6;
+  }
 }

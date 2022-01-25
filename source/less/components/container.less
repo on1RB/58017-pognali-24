@@ -1,0 +1,47 @@
+.container {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 45px;
+  }
+}
+
+.container__toggle {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: block;
+  border: none;
+  background: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 25px;
+  opacity: 0.6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1d2e5b;
+    left: -42px;
+    top: 9px;
+  }
+
+  &--current {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,9 +1,45 @@
 .step-next {
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
   font-family: inherit;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
+  padding: 7px 42px;
   color: @basic-blue-light;
   text-transform: uppercase;
   background-color: @basic-yellow;
+  text-decoration: none;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 284px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 29px;
+    padding-bottom: 27px;
+    padding-right: 75px;
+    padding-left: 33.76px;
+    text-transform: unset;
+    order: 6;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 50%;
+      margin-top: -7px;
+      right: 35px;
+      background-image: url("../img/triangle.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+  }
 }

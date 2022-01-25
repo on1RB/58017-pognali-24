@@ -8,11 +8,27 @@ block pageInfo
 block main
   main.catalog-main
     h1.visually-hidden Выберите попутчиков и "Погнали?"
+    ._wrapper
+      h2._title Попутчики
+      a._link(href="index.html") На главную
     include includes/catalog-filter
-    include includes/companion
-    include includes/user-card
-    button._prev.visually-hidden(type="button") Предыдущая страница
-    button._show(type="button") показать еще
-    button._next.visually-hidden(type="button") Следующая страница
-  footer.page-footer
+    ._inner
+      include includes/companion
+      ._flex-block
+        include includes/user-card
+        button._show-more(type="button") показать еще
+        ._flex-container
+          ul.pagination._list
+            li._item
+              a._link.-active(href="#") 1
+            li._item
+              a._link(href="#") 2
+            li._item
+              a._link(href="#") 3
+            li._item
+              a._link(href="#") 4
+          ._container
+            button._prev(type="button" aria-label="Предыдущая страница")
+            button._next(type="button" aria-label="Следующая страница")
+  footer.page-footer.-catalog
     include includes/footer

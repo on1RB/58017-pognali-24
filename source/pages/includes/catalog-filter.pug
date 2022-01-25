@@ -1,23 +1,21 @@
 section.filter
   ._wrapper
-    img(src="img/filter-icon.svg", alt="Иконка фильтра")
-    p._text Фильтрация по странам:
-    button._open(type="button")
-      img(src="img/filter-open.svg", alt="Открыть фильтр")
-    button._close(type="button")
-      img(src="img/filter-close.svg", alt="Закрыть фильтр")
-  ul.mainland-list
-    li._item
-      a._link.-current Европа
-    li._item
-      a._link Азия
-    li._item
-      a._link Америка
-    li._item
-      a._link Острова
-  include filter-table
-  ul.country-list
-    each item in ['Австралия', 'Австрия', 'Азербайджан', 'Албания', 'Алжир', 'Ангола', 'Андорра', 'Антигуа и Барбуда', 'Аргентина', 'Армения', 'Афганистан']
+    button._button(type="button") Фильтрация по странам:
+    button._show-more(type="button") Показать все
+    button._turn(type="button") Свернуть
+    ul.mainland-list.-active
       li._item
-        a._link= item
-  button._roll(type="button") Свернуть
+        a._link.-current Европа
+      li._item
+        a._link Азия
+      li._item
+        a._link Америка
+      li._item
+        a._link Острова
+  ._inner.-active
+    include catalog-filter-table
+    ul.country-list
+      each item in ['Австралия', 'Австрия', 'Азербайджан', 'Албания', 'Алжир', 'Ангола', 'Андорра', 'Антигуа и Барбуда', 'Аргентина', 'Армения', 'Афганистан']
+        li._item
+          a._link(href="#")= item
+    button._roll(type="button") Свернуть

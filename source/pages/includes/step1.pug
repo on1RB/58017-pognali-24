@@ -1,20 +1,33 @@
 section.step1
-  p._title Шаг 1.<br> Даты пребывания
-  p._description Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+  ._flex-container
+    ._inner
+      p._title Шаг 1.
+        a._link(href="#") Даты пребывания
+      p._description Укажите предпочтительное количество попутчиков, которых
+        span._transfer <br>
+        |  вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+    .container
+      button._toggle.-current(type="button") Даты
+      button._toggle(type="button") Маршрут
+      button._toggle(type="button") Развлечения
   ._wrapper
     strong._companion Ищу попутчиков:
     span._person Чел.
-  include counter
-  ._wrapper
+    include counter
+  ._wrapper.-tablet
     strong._companion Длительность:
-    span._person Дн.
-  include counter
+    span._person.-letter Дн.
+    .counter.-order
+      button._button.-reduce(type="button", aria-label="Убавить.")
+      input._value(type=text, value="3")
+      button._button.-add(type="button", aria-label="Прибавить.")
   label._child
-    input._field(type="checkbox" name="child")
+    input._field.visually-hidden(type="checkbox" name="child")
+    span._control-mark
     span._text Можно с детьми
   ._date
-    button._button.visually-hidden(type="button") Прошлый месяц.
+    button._button.-prev(type="button" aria-label="Прошлый месяц.")
     p._month Март 2019
-    button._button.visually-hidden(type="button") Следующий месяц.
+    button._button.-next(type="button" aria-label="Следующий месяц.")
   include calendar
-  button.step-next(type="button") Следующий шаг
+  a.step-next(href="#") Следующий шаг

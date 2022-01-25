@@ -1,7 +1,10 @@
 div.footer-contacts
   ._wrapper
     a._logo
-      img(src="img/main-logo.svg", width="96", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
+      picture
+        source(media="(min-width: 1440px)", width="200px", height="50px", srcset="img/logo-footer-desktop.svg")
+        source(media="(min-width: 768px)", width="166px", height="42px", srcset="img/logo-footer-tablet.svg")
+        img(src="img/footer-logo-mobile.svg", width="96px", height="15px", alt="Логотип сайта путешествий 'Погнали?'.")
     ul.social-list._list
       li._item
         a._link.-fb.-color(href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук.")
@@ -11,4 +14,4 @@ div.footer-contacts
         a._link.-inst.-color(href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм.")
   ._copyright
     span._text Разработано
-    img(src="img/htmlacademy.svg", width="27", height="33", alt="Логотип htmlacademy.")
+    img._pic(src="img/htmlacademy.svg", width="27px", height="34px", alt="Логотип htmlacademy.")

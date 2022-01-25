@@ -4,22 +4,24 @@ table.filter-table
       td Буквы по алфавиту
   tbody._items
     tr._row
-      each item in ['А', 'Б', 'В', 'Г', 'Д']
+      td._col.-active
+        button._letter.-active(type="button") A
+      each item in ['Б', 'В', 'Г', 'Д']
         td._col
-          button._letter= item
+          button._letter(type="button")= item
     tr._row
       each item in ['Е', 'З', 'И', 'К', 'Л']
         td._col
-          button._letter= item
+          button._letter(type="button")= item
     tr._row
       each item in ['М', 'Н', 'О', 'П', 'Р']
         td._col
-          button._letter= item
+          button._letter(type="button")= item
     tr._row
       each item in ['С', 'Т', 'У', 'Ф', 'Х']
         td._col
-          button._letter= item
+          button._letter(type="button")= item
     tr._row
       each item in ['Ч', 'Ш', 'Э', 'Ю', 'Я']
         td._col
-          button._letter= item
+          button._letter(type="button")= item

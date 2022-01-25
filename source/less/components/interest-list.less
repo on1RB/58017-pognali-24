@@ -1,0 +1,115 @@
+.interest-list {
+  display: none;
+  margin-bottom: 11px;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      padding-left: 6px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: column;
+      padding-left: 0;
+    }
+  }
+}
+
+.interest-list__item {
+  @media (min-width: @tablet-width) {
+    &--first {
+      width: 143px;
+      margin-right: 26px;
+    }
+
+    &--second {
+      width: 141px;
+      margin-right: 31px;
+    }
+
+    &--third {
+      width: 150px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: auto;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.interest-list__control {
+  position: relative;
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  padding-top: 3px;
+  padding-left: 27px;
+  padding-right: 15px;
+  margin-bottom: 9px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    padding-left: 36px;
+    padding-top: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 37px;
+  }
+}
+
+.interest-list__input[type="checkbox"]:checked + .interest-list__mark::before {
+  position: absolute;
+  content: "";
+  width: 8.25px;
+  height: 8.45px;
+  background-image: url("../img/catalog-check-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 5px;
+  top: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 11px;
+    height: 11.27px;
+    left: 7px;
+    top: 6px;
+    background-image: url("../img/catalog-check-tablet.svg");
+  }
+}
+
+.interest-list__mark {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 2px;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+    top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+  }
+}
