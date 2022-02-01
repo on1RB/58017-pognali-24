@@ -8,61 +8,95 @@ block main
   main.page-main
     h1.visually-hidden Путешествия вместе с "Погнали?"
     section.intro
-      p._title В путешествие с крутыми попутчиками!
-      ul._list
-        li._item
-          a._link.-phone(href="tel:88005558628")
-            span.visually-hidden 8 800 555-86-28
-        li._item
-          a._link.-mail(href="mailto:mail@htmlacademy.ru")
-            span.visually-hidden mail@htmlacademy.ru
-        li._item
-          a._link.-login(href="#") Авторизация
-      figure._text
-        blockquote._quote «Лучшее приложение, что я видел в жизни!»
-        figcaption._author Мурат Эльтазин главный редактор газеты «гаджетлайф»
+      ._wrapper
+        p._title В путешествие <br> с крутыми попутчиками!
+        ul._list.-hidden
+          li._item
+            a._link.-phone(href="tel:88005558628")
+              span.visually-hidden 8 800 555-86-28
+          li._item
+            a._link.-mail(href="mailto:mail@htmlacademy.ru")
+              span.visually-hidden mail@htmlacademy.ru
+          li._item
+            a._link.-login(href="#") Авторизация
+        figure._text
+          blockquote._quote «Лучшее приложение, что я видел в жизни!»
+          figcaption._author Мурат Эльтазин <br> главный редактор газеты «гаджетлайф»
       ol.features-list._list
-        li._item Выберите направление
-        li._item Изучите идеи путешественников
-        li._item Находите тех, кто похож на вас
-        li._item Путешествуйте вместе!
+        li._item.-direction
+          p._text Выберите <br> направление
+          span._count 1
+        li._item.-ideas
+          p._text Изучите идеи <br> путешественников
+          span._count 2
+        li._item.-similarity
+          p._text Находите тех, <br> кто похож на вас
+          span._count 3
+        li._item.-together
+          p._text Путешествуйте <br> вместе!
+          span._count 4
+      .desktop-navigation
+        a._logo
+          img(src="img/logo-footer-desktop.svg", width="200px", height="50px", alt="Логотип сайта путешествий 'Погнали?'.")
+        span._toggle
+        nav.main-nav
+          ul.site-list
+            each link in navLinks
+              if link.href === location
+                li._item.-active
+                  a._link.-scroll-menu=link.text
+              else
+                li._item
+                  a._link.-scroll-menu(href=link.href)=link.text
+          ul.user-list
+            li._item
+              a._link.-phone(href="tel:88005558628")
+                span.visually-hidden 8 800 555-86-28
+            li._item
+              a._link.-mail(href="mailto:mail@htmlacademy.ru")
+                span.visually-hidden mail@htmlacademy.ru
+            li._item
+              a._link.-login Авторизация
     section.about
       h2._title О сервисе
-      p._description Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+      p._description Любое путешествие веселее
+        br._shift
+        |  с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий
+        br._shift.-tablet
+        |  и черпайте вдохновение
+        br._shift.-tablet
+        |  в чужих.
       p._slogan А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
+      a.button.-service(href="#") Подробнее
     section.direction
       ._wrapper
         h2._title Направления
-        p._description Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-        a.button._button-desktop(href="form.html") Показать все
+        p._description Мы не продаем туры <br> и ничего не рекламируем. <br> Люди сами пишут о странах, <br> куда хотели бы отправиться <br> и чем можно там заняться.
       ul.list-country._list
         li._item.-thailand
-          img._pic(src="img/bg-thailand-mobile.png", width="270", height="110", alt="Пляж Тайланда.")
-          img._flag(src="img/thailand.png", width="35", height="24", alt="Флаг Таиланда.")
+          ._pic.-thailand(aria-label="Пляж Тайланда.")
+          ._flag.-thailand(aria-label="Флаг Тайланда.")
           ._inner
-            ._wrapper
-              h3._title Таиланд
-              p._description Джунгли зовут!
+            h3._title Таиланд
+            p._description Джунгли зовут!
             p._count
               span.visually-hidden="Попутчиков"
               | 18321
         li._item.-france
-          img._pic(src="img/bg-france-mobile.png", width="270", height="110", alt="Город Франции.")
-          img._flag(src="img/france.png", width="35", height="24", alt="Флаг Франции.")
+          ._pic.-france(aria-label="Город Франции.")
+          ._flag.-france(aria-label="Флаг Франции.")
           ._inner
-            ._wrapper
-              h3._title Франция
-              p._description Трэ бьен, манифик!
+            h3._title Франция
+            p._description Трэ бьен, манифик!
             p._count
               span.visually-hidden="Попутчиков"
               | 12518
         li._item.-czech
-          img._pic(src="img/bg-czech-mobile.png", width="270", height="110", alt="Море Чехии.")
-          img._flag(src="img/czech.png", width="35", height="24", alt="Флаг Чехии.")
+          ._pic.-czech(aria-label="Море Чехии.")
+          ._flag.-czech(aria-label="Флаг Чехии.")
           ._inner
-            ._wrapper
-              h3._title Чехия
-              p._description Закоулки старой Европы
+            h3._title Чехия
+            p._description Закоулки старой Европы
             p._count
               span.visually-hidden="Попутчиков"
               | 5326
@@ -70,64 +104,95 @@ block main
     section.travelers
       ._box
         h2._title Попутчики
-        p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        p._slogan Теперь можно легко найти единомышленников!
-        a.button._desktop(href="catalog.html" aria-label="Показать всех.") Показать всех
+        p._description Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br> а другому маршрут для хайкинга.
+        p._slogan Теперь можно легко
+          br._shift
+          |  найти единомышленников!
       ._wrapper
         each user in [users[0], users[1]]
-          .user-card
-            ._inner
+          .user-card(class=user.levelClass)
+            picture
+              source(media="(min-width: 768px)", width="285px", height="285px", srcset=`img/${user.userPhoto}-main-285x285.png`)
               img._photo(src=`img/${user.userPhoto}.png`, alt=user.userAlt)
-              label.level._level(lang="en") level
-                meter(value=user.level, max=100)
+            ul._country(class=user.class)
+              each country in user.countries
+                li._item
+                  img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
             ._info
-              ul._country
-                each country in user.countries
-                  li._item
-                    img(src=`img/${country}.png` alt=COUNTRIES_RUS[country])
-              h3._name=user.name + ' ' + user.surname
+              h3._name(class=user.isClass)(class=user.isOnlineMain ? 'user-card__name--online' : '')=user.name + ' ' + user.surname
               ul.hashtag-list._list
                 each tag in user.hashtag
                   li._item
-                    a(href="")._link=tag
-              ul.hobby-list._hobby
-                each isLiked, hobby in user.hobbies
-                  li._item
-                    img(src=`img/${hobby}.svg`, alt=`${isLiked ? 'Любит' : 'Не любит'} ${HOBBIES_RUS[hobby]}.`)
+                    a(href="#")._link=tag
+              ul.transport-list.-main-page
+                li._item
+                  label._control.-main-page
+                    input._input.visually-hidden(type="checkbox" name="plane" checked=user.hobbies disabled)
+                    span._mark.-plane.-main-page
+                    span._label.visually-hidden Авиаперевозки
+                li._item
+                  label._control.-main-page
+                    input._input.visually-hidden(type="checkbox" name="bus" checked=user.hobbies.bus disabled)
+                    span._mark.-bus.-main-page
+                    span._label.visually-hidden Автобусные путешествия
+                li._item
+                  label._control.-main-page
+                    input._input.visually-hidden(type="checkbox" name="bicycle" checked=user.hobbies.bicycle disabled)
+                    span._mark.-bicycle.-main-page
+                    span._label.visually-hidden Кататься на велосипеде
+                li._item
+                  label._control.-main-page
+                    input._input.visually-hidden(type="checkbox" name="run" checked=user.hobbies.run disabled)
+                    span._mark.-run.-main-page
+                    span._label.visually-hidden Пешие прогулки
       a.button._show(href="catalog.html" aria-label="Показать всех.") Показать всех
     section.profile
       ._wrapper
         h2._title Добавьте свой профиль
-        img._pic(src="img/rates.png", width="100", height="100" alt="Ставки.")
-      ol.pricing-list._pricing
+        ._rates(aria-label="Ставки.")
+      ul.pricing-list._pricing
         li._item
           p._description Базовое размещение
+          span._count 1
           p._value Бесплатно
         li._item
           p._description Вывод на первых позициях
+          span._count.-dark-yellow 2
           p._value 99 руб./мес
-        li._item
+        li._item.-border
           p._description Кастомный цвет карточки
+          span._count.-yellow 3
           p._value 59 руб./мес
       button._show(type="button") Показать тарифы для бизнеса
     section.interested
       h2._title Заинтересовались?
-      p._description Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-        a._link.-login авторизуйтесь
+      p._description Зарегистрируйтесь,
+        br._shift
+        |  это быстро и бесплатно!
+        br
+        |  Уже зарегистрированы? Тогда
+        br._shift
+        |  скорее
+        a._link.-login(href="#") авторизуйтесь
         | .
       form._mail(action="https://echo.htmlacademy.ru" method="post")
         label.visually-hidden(for="email") Email
         input._field(type="email" id="email" name="email" placeholder="E-mail" required)
-        button._button.visually-hidden(type="submit") Регистрация.
-      p._question Остались вопросы?<br> Мы с радостью на них ответим!
+        button._button(type="submit" aria-label="Регистрация.")
+      p._question Остались вопросы?
+        br._shift
+        |  Мы с радостью на них ответим!
       address._wrapper
-        a._link.-phone(href="tel:88005558628") 8 800 555-86-28
+        a._link.-phone(href="tel:88005558628") 8 800 555-86-28
         a._link.-mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
   footer.page-footer
     section.navigation
       address._address
         p._text ул. Большая Конюшенная, 19/8
-        button._button(type="button") Проложить маршрут
-      ._map
-        span._mark.visually-hidden Наш адрес
+        a._button(href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+191186/@59.9385203,30.3222749,17z/data=!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474") Проложить маршрут
+    section.map
+      span.visually-hidden Как до нас добраться
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.615609840007!2d30.322274922571033!3d59.93852031741016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1643582366882!5m2!1sru!2s", width="320", height="424", allowfullscreen)
     include includes/footer
+  section.modal
+

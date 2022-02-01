@@ -26,10 +26,13 @@
       "like": "1,5 М",
       "hashtag": ["#ЗОЖ", "#ПП", "#Фитнес", "#пляж", "#авокадо", "#смузи"],
       "countries": ["sri-lanka", "thailand", "seychelles"],
-      "level": "99",
       "hobbies": {"plane": true, "bus": false, "bicycle": false, "run": false},
       "isLiked": true,
-      "isOnline": false
+      "isOnline": false,
+      "isOnlineMain": false,
+      "class": "user-card__country--user1",
+      "isClass": "user-card__name--user1",
+      "levelClass": "user-card--user1"
     },
     {
       "userPhoto": "demin",
@@ -40,10 +43,13 @@
       "like": "1500",
       "hashtag": ["#бургер", "#бар", "#футбол", "#концерт", "#крафт"],
       "countries": ["belgium", "czech"],
-      "level": "80",
       "hobbies": {"plane": true, "bus": true, "bicycle": false, "run": true},
       "isLiked": false,
-      "isOnline": false
+      "isOnline": false,
+      "isOnlineMain": true,
+      "class": "user-card__country--user2",
+      "isClass": "user-card__name--user2",
+      "levelClass": "user-card--user2"
     },
     {
       "userPhoto": "smolov",

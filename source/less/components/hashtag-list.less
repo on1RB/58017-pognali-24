@@ -4,6 +4,19 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 188px;
+  padding-left: 46px;
+  margin-bottom: 14px;
+  padding-right: 46px;
+
+  @media (min-width: @tablet-width) {
+    width: 225px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 26px;
+  }
 }
 
 .hashtag-list__link {
@@ -13,4 +26,10 @@
   line-height: 18px;
   font-weight: 400;
   color: @special-grey;
+  margin-right: 5px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }

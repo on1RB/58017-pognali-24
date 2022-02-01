@@ -6,6 +6,18 @@
   flex-direction: row;
   margin-bottom: 21px;
 
+  &--main-page {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    @media (min-width: @tablet-width) {
+      justify-content: flex-start;
+      padding-left: 81px;
+      padding-right: 81px;
+    }
+  }
+
   &--active {
     display: flex;
   }
@@ -60,6 +72,10 @@
 
 .transport-list__item {
   margin-right: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 11px;
+  }
 }
 
 .transport-list__control {
@@ -74,6 +90,11 @@
     height: 43px;
 
     &--user-card {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--main-page {
       width: 23px;
       height: 22px;
     }
@@ -100,24 +121,24 @@
   @media (min-width: @tablet-width) {
     width: 23px;
     height: 22px;
-    top: 11px;
-    left: 10px;
-  }
-}
-
-.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
-.transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before {
-  @media (min-width: @tablet-width) {
     top: 0;
     left: 0;
   }
 }
+
+// .transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"]:checked + .transport-list__mark--user-card::before,
+// .transport-list__input[type="checkbox"] + .transport-list__mark--user-card::before {
+//   @media (min-width: @tablet-width) {
+//     top: 0;
+//     left: 0;
+//   }
+// }
 
 .transport-list__input[type="checkbox"]:checked + .transport-list__mark--plane::before {
   background-image: url("../img/icon-plane-mobile.svg");
@@ -199,6 +220,13 @@
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 43px;
+  }
+
+  &--main-page {
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 22px;
+    }
   }
 
   &--user-card {

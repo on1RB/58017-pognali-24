@@ -4,6 +4,10 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 3px;
+  }
 }
 
 .user-list__link {
@@ -16,6 +20,29 @@
   color: @basic-blue;
   text-transform: uppercase;
 
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+
+  &--phone,
+  &--mail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--phone {
+    background-color: @special-orange;
+    background-image: url("../img/icon-phone-main-nav-desktop.svg");
+  }
+
+  &--mail {
+    background-color: #ffbd30;
+    background-image: url("../img/icon-mail-main-nav-desktop.svg");
+  }
+
   &--login {
     background-color: @basic-yellow;
     padding-top: 16px;
@@ -23,15 +50,16 @@
     padding-left: 29px;
     padding-right: 28px;
     border-radius: 25px;
-  }
+    cursor: pointer;
 
-  @media (min-width: @tablet-width) {
-    &--login {
+    @media (min-width: @tablet-width) {
       display: block;
+      padding-left: 30px;
     }
-  }
 
-  @media (min-width: @desktop-width) {
-    display: block;
+    @media (min-width: @desktop-width) {
+      padding-top: 14px;
+      padding-bottom: 16px;
+    }
   }
 }

@@ -1,7 +1,10 @@
 .main-menu
   ._wrapper
     a._logo
-      img._image(src="img/main-logo.svg", width="96", height="15", alt="Логотип сайта путешествий 'Погнали?'.")
+      picture
+        source(media="(min-width: 1440px)", width="200px", height="50px", srcset="img/logo-footer-desktop.svg")
+        source(media="(min-width: 768px)", width="166px", height="42px", srcset="img/logo-footer-tablet.svg")
+        img(src="img/footer-logo-mobile.svg", width="96px", height="15px", alt="Логотип сайта путешествий 'Погнали?'.")
     button._toggle(type="button")
       span.visually-hidden Закрыть меню.
     a._auth Авторизация
@@ -20,7 +23,7 @@
       a._link.-phone(href="tel:88005558628") 8 800 555-86-28
     li._user-item
       a._link.-mail(href="mailto:mail@htmlacademy.ru") mail@htmlacademy.ru
-  ul.social-list._list
+  ul.social._list
     li._item
       a._link.-fb(href="https://www.facebook.com/htmlacademy", aria-label="Фейсбук.")
     li._item

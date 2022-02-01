@@ -9,7 +9,7 @@ each user in users
       span._mark
       strong._count=user.like
       span._label.visually-hidden Хотите поставить лайк?
-    h3._name(class= user.isOnline ? 'user-profile__name--online' : '')
+    h3._name(class=user.isOnline ? 'user-profile__name--online' : '')
       =user.name
       span._shift <br>
       =user.surname

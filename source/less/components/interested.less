@@ -1,5 +1,31 @@
 .interested {
   background-color: #192144;
+  margin-top: -33px;
+  padding-top: 103px;
+  padding-bottom: 29px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 127px;
+    margin-top: -55px;
+    padding-bottom: 68px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 160px;
+    padding-left: 133px;
+    padding-right: 133px;
+    padding-bottom: 106px;
+  }
 }
 
 .interested__title {
@@ -8,11 +34,51 @@
   line-height: 24px;
   font-weight: 700;
   color: @special-orange;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 59px;
+  }
 }
 
 .interested__description {
+  width: 210px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0;
   color: #ffffff;
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 618px;
+    font-size: 28px;
+    line-height: 32px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 655px;
+    padding-left: 260px;
+    padding-right: 259px;
+    line-height: 31px;
+    margin-bottom: 61px;
+  }
+}
+
+.interested__shift {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .interested__link {
@@ -25,21 +91,125 @@
   color: @basic-yellow;
   text-decoration: underline;
 
-  &--phone {
-    text-decoration: none;
-    font-weight: 700;
+  &--login {
+    display: inline-block;
+    padding-left: 5px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
 
+  &--phone,
   &--mail {
+    position: relative;
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-left: 61px;
+    text-align: left;
+
+    @media (min-width: @tablet-width) {
+      font-size: 28px;
+      line-height: 28px;
+      padding-left: 90px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 121px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      background-color: #121936;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: @tablet-width) {
+        width: 68px;
+        height: 68px;
+        top: -10px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 90px;
+        height: 90px;
+        top: -21px;
+      }
+    }
+  }
+
+  &--phone {
+    width: 180px;
+
+    &::before {
+      background-image: url("../img/icon-telephone-mobile.svg");
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 298px;
+      margin-bottom: 16px;
+
+      &::before {
+        background-image: url("../img/icon-telephone-tablet.svg");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 329px;
+
+      &::before {
+        background-image: url("../img/icon-telephone-desktop.svg");
+      }
+    }
+  }
+
+  &--mail {
+    width: 237px;
+
+    &::before {
+      background-image: url("../img/icon-mail-mobile.svg");
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 399px;
+
+      &::before {
+        background-image: url("../img/icon-mail-tablet.svg");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 429px;
+
+      &::before {
+        background-image: url("../img/icon-mail-desktop.svg");
+      }
+    }
   }
 }
 
 .interested__mail {
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 68px;
+  }
 }
 
 .interested__field {
@@ -47,22 +217,133 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding-left: 25px;
+  padding-top: 19px;
+  padding-bottom: 22px;
+  padding-right: 70px;
+  outline: none;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 36px;
+    padding-top: 24px;
+    padding-bottom: 28px;
+    padding-right: 90px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1174px;
+    padding-bottom: 29px;
+    padding-right: 330px;
+  }
 
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
   }
 }
 
+.interested__button {
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 62px;
+  right: 0;
+  top: 0;
+  background-color: @basic-yellow;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    right: 36px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 324px;
+    height: 81px;
+    right: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    top: 24px;
+    left: 26px;
+    background-image: url("../img/polygon-mobile-main.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 34px;
+      left: 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 33px;
+      left: 277px;
+    }
+  }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "Регистрация";
+      position: absolute;
+      font-family: "Bloger-Sans", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      left: 36px;
+      top: 28px;
+      letter-spacing: 0;
+      color: @basic-blue-light;
+    }
+  }
+}
+
 .interested__question {
   margin: 0;
   color: #ffffff;
+  letter-spacing: 0.01em;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 30px;
+    padding-left: 8px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    margin-bottom: 65px;
+  }
 }
 
 .interested__wrapper {
   display: flex;
   flex-direction: column;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+  }
+
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    justify-content: space-between;
+    padding-left: 153px;
+    padding-right: 153px;
   }
 }
