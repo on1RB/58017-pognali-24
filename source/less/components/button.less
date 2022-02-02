@@ -11,6 +11,14 @@
   border-radius: 10px;
   padding: 22px 23px;
 
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -90,4 +98,8 @@
       margin-left: 71px;
     }
   }
+}
+
+.button:active::after {
+  opacity: 0.3;
 }

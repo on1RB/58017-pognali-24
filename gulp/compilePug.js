@@ -10,7 +10,7 @@ export default function compilePug() {
     .pipe(data(JSON.parse(fs.readFileSync("source/mock/data.json"))))
     .pipe(
       pug({
-        pretty: true,
+        pretty: false,
         plugins: [BEM],
       })
     )

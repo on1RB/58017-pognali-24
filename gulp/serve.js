@@ -3,6 +3,9 @@ import browser from "browser-sync";
 import compilePug from "./compilePug.js";
 import copyAssets from "./copyAssets.js";
 import compileLess from './compileLess.js'
+import { sprite } from "./compileSvg.js";
+import { copyImages } from "./optimizeImages.js";
+import { scripts } from "./compileJs.js";
 
 function streamStyles() {
   return compileLess().pipe(browser.stream())
@@ -32,7 +35,10 @@ function watcher() {
   );
   gulp.watch("source/assets/**/*", gulp.series(copyAssets, reload));
   gulp.watch('source/less/**/*.less', streamStyles);
+  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
+  gulp.watch('source/img/**/*', gulp.series(copyImages, reload));
+  gulp.watch("source/icons/*.svg", gulp.series(sprite, reload));
 }
 
-export const startProject = gulp.series(compilePug, copyAssets, compileLess)
-export default gulp.series(startProject, initServer, watcher);
+export const startProject = gulp.series(compilePug, copyAssets, compileLess, sprite, scripts)
+export default gulp.series(startProject, copyImages, initServer, watcher);

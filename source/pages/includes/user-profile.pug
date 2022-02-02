@@ -1,9 +1,9 @@
 each user in users
   section.user-profile
     picture._img
-      source(media="(min-width: 1440px)", width="285px", height="285px", srcset=`img/${user.userAvatar}-285x285.png`)
-      source(media="(min-width: 768px)", width="190px", height="190px", srcset=`img/${user.userAvatar}-190x190.png`)
-      img._pic(src=`img/${user.userAvatar}-70x70.png`, width="70px", height="70px", alt=user.userAlt)
+      source(media="(min-width: 1440px)", width="285", height="285", srcset=`img/${user.userAvatar}-285x285.png`)
+      source(media="(min-width: 768px)", width="190", height="190", srcset=`img/${user.userAvatar}-190x190.png`)
+      img._pic(src=`img/${user.userAvatar}-70x70.png`, width="70", height="70", alt=user.userAlt)
     label._like
       input._input.visually-hidden(type="checkbox" name="like" checked=user.isLiked)
       span._mark
@@ -22,7 +22,7 @@ each user in users
       each country in user.countries
         li._item
           picture
-            source(media="(min-width: 768px)", width="35px", height="24px", srcset=`img/${country}.png`)
+            source(media="(min-width: 768px)", width="35", height="24", srcset=`img/${country}.png`)
             img._img(src=`img/${country}-small.png` alt=COUNTRIES_RUS[country])
           span._name=COUNTRIES_RUS[country]
     ._inner
