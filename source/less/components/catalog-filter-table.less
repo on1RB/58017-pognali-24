@@ -18,7 +18,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    column-gap: 207px;
+    grid-template-columns: 207px 207px 207px 207px 207px;
+    column-gap: 43px;
+    row-gap: 50px;
+    margin-bottom: 61px;
+    padding-left: 31px;
+    background-color: #edeff6;
   }
 }
 
@@ -39,6 +44,18 @@
   display: block;
   cursor: pointer;
 
+  &:hover {
+    border: 1px solid #959bb2;
+    margin: -1px;
+  }
+
+  &:active {
+    border: 1px solid @basic-blue-light;
+    margin: -1px;
+    background-color: @basic-blue-light;
+    color: #ffffff;
+  }
+
   @media (min-width: @tablet-width) {
     color: #192144;
     opacity: 0.3;
@@ -48,11 +65,27 @@
     background: none;
   }
 
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
   &--active {
     color: #ffffff;
     background-color: @basic-blue-light;
     margin-right: -1px;
     margin-bottom: -1px;
+
+    &:hover {
+      border: none;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    &:active {
+      border: none;
+      margin-left: 0;
+      margin-top: 0;
+    }
 
     @media (min-width: @tablet-width) {
       background: none;
@@ -60,5 +93,299 @@
       color: #192144;
       opacity: 1;
     }
+  }
+}
+
+.catalog-filter-table__container {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 207px;
+  }
+}
+
+.catalog-filter-table__container:nth-child(2) .catalog-filter-table__symbol {
+  margin-bottom: 33px;
+  padding-left: 6px;
+}
+
+.catalog-filter-table__container:nth-child(2) .catalog-filter-table__list {
+  padding-left: 4px;
+}
+
+.catalog-filter-table__container:nth-child(3) .catalog-filter-table__symbol {
+  margin-bottom: 32px;
+  padding-left: 6px;
+}
+
+.catalog-filter-table__container:nth-child(3) .catalog-filter-table__list {
+  padding-left: 7px;
+}
+
+.catalog-filter-table__container:nth-child(4) .catalog-filter-table__symbol {
+  padding-left: 6px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-table__container:nth-child(4) .catalog-filter-table__list {
+  padding-left: 11px;
+}
+
+.catalog-filter-table__container:nth-child(5) .catalog-filter-table__symbol {
+  padding-left: 7px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-table__container:nth-child(5) .catalog-filter-table__list {
+  padding-left: 13px;
+}
+
+.catalog-filter-table__container:nth-child(6) .catalog-filter-table__symbol {
+  padding-left: 7px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-table__container:nth-child(6) .catalog-filter-table__list {
+  padding-left: 5px;
+}
+
+.catalog-filter-table__container:nth-child(7) .catalog-filter-table__symbol {
+  padding-left: 4px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-table__container:nth-child(7) .catalog-filter-table__list {
+  padding-left: 5px;
+}
+
+.catalog-filter-table__container:nth-child(8) .catalog-filter-table__symbol {
+  padding-left: 6px;
+  margin-bottom: 29px;
+}
+
+.catalog-filter-table__container:nth-child(8) .catalog-filter-table__list {
+  padding-left: 9px;
+}
+
+.catalog-filter-table__container:nth-child(9) .catalog-filter-table__symbol {
+  padding-left: 7px;
+}
+
+.catalog-filter-table__container:nth-child(9) .catalog-filter-table__list {
+  padding-left: 10px;
+}
+
+.catalog-filter-table__container:nth-child(10) .catalog-filter-table__symbol {
+  padding-left: 8px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-table__container:nth-child(10) .catalog-filter-table__list {
+  padding-left: 11px;
+}
+
+.catalog-filter-table__container:nth-child(11) .catalog-filter-table__symbol {
+  padding-left: 5px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(11) .catalog-filter-table__list {
+  padding-left: 10px;
+}
+
+.catalog-filter-table__container:nth-child(12),
+.catalog-filter-table__container:nth-child(13),
+.catalog-filter-table__container:nth-child(14),
+.catalog-filter-table__container:nth-child(15),
+.catalog-filter-table__container:nth-child(16) {
+  margin-top: -5px;
+}
+
+.catalog-filter-table__container:nth-child(12) .catalog-filter-table__symbol {
+  padding-left: 5px;
+  margin-bottom: 36px;
+}
+
+.catalog-filter-table__container:nth-child(12) .catalog-filter-table__list {
+  padding-left: 4px;
+}
+
+.catalog-filter-table__container:nth-child(13) .catalog-filter-table__symbol {
+  padding-left: 7px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(13) .catalog-filter-table__list {
+  padding-left: 8px;
+}
+
+.catalog-filter-table__container:nth-child(14) .catalog-filter-table__symbol {
+  padding-left: 8px;
+  margin-bottom: 35px;
+}
+
+.catalog-filter-table__container:nth-child(14) .catalog-filter-table__list {
+  padding-left: 11px;
+}
+
+.catalog-filter-table__container:nth-child(15) .catalog-filter-table__symbol {
+  padding-left: 9px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-table__container:nth-child(15) .catalog-filter-table__list {
+  padding-left: 12px;
+}
+
+.catalog-filter-table__container:nth-child(16) .catalog-filter-table__symbol {
+  padding-left: 6px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(16) .catalog-filter-table__list {
+  padding-left: 10px;
+}
+
+.catalog-filter-table__container:nth-child(17),
+.catalog-filter-table__container:nth-child(18),
+.catalog-filter-table__container:nth-child(19),
+.catalog-filter-table__container:nth-child(20),
+.catalog-filter-table__container:nth-child(21) {
+  margin-top: 33px;
+}
+
+.catalog-filter-table__container:nth-child(17) .catalog-filter-table__symbol {
+  padding-left: 5px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(17) .catalog-filter-table__list {
+  padding-left: 7px;
+}
+
+.catalog-filter-table__container:nth-child(18) .catalog-filter-table__symbol {
+  padding-left: 7px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(18) .catalog-filter-table__list {
+  padding-left: 8px;
+}
+
+.catalog-filter-table__container:nth-child(19) .catalog-filter-table__symbol {
+  padding-left: 8px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(19) .catalog-filter-table__list {
+  padding-left: 10px;
+}
+
+.catalog-filter-table__container:nth-child(20) .catalog-filter-table__symbol {
+  padding-left: 9px;
+  margin-bottom: 33px;
+}
+
+.catalog-filter-table__container:nth-child(20) .catalog-filter-table__list {
+  padding-left: 11px;
+}
+
+.catalog-filter-table__container:nth-child(21) .catalog-filter-table__symbol {
+  padding-left: 6px;
+  margin-bottom: 34px;
+}
+
+.catalog-filter-table__container:nth-child(21) .catalog-filter-table__list {
+  padding-left: 13px;
+}
+
+.catalog-filter-table__container:nth-child(22),
+.catalog-filter-table__container:nth-child(23),
+.catalog-filter-table__container:nth-child(24),
+.catalog-filter-table__container:nth-child(25),
+.catalog-filter-table__container:nth-child(26) {
+  margin-top: -7px;
+}
+
+.catalog-filter-table__container:nth-child(22) .catalog-filter-table__symbol {
+  padding-left: 4px;
+  margin-bottom: 39px;
+}
+
+.catalog-filter-table__container:nth-child(22) .catalog-filter-table__list {
+  padding-left: 5px;
+}
+
+.catalog-filter-table__container:nth-child(23) .catalog-filter-table__symbol {
+  padding-left: 6px;
+  margin-bottom: 39px;
+}
+
+.catalog-filter-table__container:nth-child(23) .catalog-filter-table__list {
+  padding-left: 8px;
+}
+
+.catalog-filter-table__container:nth-child(24) .catalog-filter-table__symbol {
+  padding-left: 7px;
+  margin-bottom: 42px;
+}
+
+.catalog-filter-table__container:nth-child(24) .catalog-filter-table__list {
+  padding-left: 11px;
+}
+
+.catalog-filter-table__container:nth-child(25) .catalog-filter-table__symbol {
+  padding-left: 8px;
+  margin-bottom: 40px;
+}
+
+.catalog-filter-table__container:nth-child(25) .catalog-filter-table__list {
+  padding-left: 14px;
+}
+
+.catalog-filter-table__container:nth-child(26) .catalog-filter-table__symbol {
+  padding-left: 5px;
+  margin-bottom: 39px;
+}
+
+.catalog-filter-table__container:nth-child(26) .catalog-filter-table__list {
+  padding-left: 12px;
+}
+
+.catalog-filter-table__symbol {
+  font-family: inherit;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #192144;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-bottom: 30px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.catalog-filter-table__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 6px;
+}
+
+.catalog-filter-table__link {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  cursor: pointer;
+
+  &:hover {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
   }
 }

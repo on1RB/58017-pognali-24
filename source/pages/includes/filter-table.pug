@@ -1,27 +1,12 @@
-table.filter-table
-  thead.visually-hidden
-    tr
-      td Буквы по алфавиту
-  tbody._items
-    tr._row
-      td._col.-active
-        button._letter.-active(type="button") A
-      each item in ['Б', 'В', 'Г', 'Д']
-        td._col
-          button._letter(type="button")= item
-    tr._row
-      each item in ['Е', 'З', 'И', 'К', 'Л']
-        td._col
-          button._letter(type="button")= item
-    tr._row
-      each item in ['М', 'Н', 'О', 'П', 'Р']
-        td._col
-          button._letter(type="button")= item
-    tr._row
-      each item in ['С', 'Т', 'У', 'Ф', 'Х']
-        td._col
-          button._letter(type="button")= item
-    tr._row
-      each item in ['Ч', 'Ш', 'Э', 'Ю', 'Я']
-        td._col
-          button._letter(type="button")= item
+.filter-table
+  button._letter.-active(type="button") A
+  each item in ['Б', 'В', 'Г', 'Д']
+    button._letter(type="button")= item
+  each item in ['Е', 'З', 'И', 'К', 'Л']
+    button._letter(type="button")= item
+  each item in ['М', 'Н', 'О', 'П', 'Р']
+    button._letter(type="button")= item
+  each item in ['С', 'Т', 'У', 'Ф', 'Х']
+    button._letter(type="button")= item
+  each item in ['Ч', 'Ш', 'Э', 'Ю', 'Я']
+    button._letter(type="button")= item

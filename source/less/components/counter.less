@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
-  width: 100%;
+  width: 220px;
 
   &--order {
     order: 3;
@@ -11,6 +11,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 24px;
+    width: 100%;
 
     &--order {
       margin-bottom: 58px;
@@ -19,7 +20,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-left: 57px;
+    margin-left: 58px;
     width: 180px;
     order: 2;
 
@@ -38,6 +39,7 @@
   padding-top: 20px;
   padding-bottom: 21px;
   top: 1px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding-top: 34px;
@@ -78,6 +80,12 @@
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 
+    &::after {
+      @media (min-width: @desktop-width) {
+        left: 14px;
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -94,10 +102,20 @@
       }
 
       @media (min-width: @desktop-width) {
-        right: 22px;
+        right: 28px;
       }
     }
   }
+}
+
+.counter__button:hover::after,
+.counter__button:hover::before {
+  background-color: #999999;
+}
+
+.counter__button:active::after,
+.counter__button:active::before {
+  background-color: #e5e5e5;
 }
 
 .counter__value {
@@ -118,19 +136,40 @@
   border-radius: 4px;
   background-color: #ffffff;
   outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:active {
+    border: 1px solid @basic-blue;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     padding-top: 22px;
     padding-bottom: 22px;
-    padding-left: 86px;
+    padding-left: 79px;
     padding-right: 86px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 18px;
-    padding-left: 53px;
+    padding-top: 20px;
+    padding-bottom: 24px;
+    padding-left: 49px;
     padding-right: 53px;
   }
+}
+
+.counter__value:hover ~ .counter__button::after,
+.counter__value:hover ~ .counter__button::before {
+  background-color: #959bb2;
+}
+
+.counter__value:active ~ .counter__button::after,
+.counter__value:active ~ .counter__button::before {
+  background-color: @basic-blue;
 }

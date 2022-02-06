@@ -1,28 +1,39 @@
 .add-country {
   position: absolute;
-  display: block;
+  display: none;
   flex-direction: column;
   z-index: 4;
-  top: 168px;
+  top: 170px;
   width: 220px;
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
 
   @media (min-width: @tablet-width) {
+    display: none;
     flex-direction: row;
-    width: 572px;
+    width: 575px;
     padding-top: 35px;
     padding-left: 27px;
-    top: 281px;
+    top: 282px;
+    left: 0;
     box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 32px;
-    padding-bottom: 24px;
+    padding-bottom: 34px;
     width: 730px;
-    top: 300px;
+    top: 304px;
+    left: 3px;
+  }
+
+  &--active {
+    display: flex;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 }
 
@@ -36,13 +47,14 @@
   border-top: none;
   background-color: #ffffff;
   padding: 19px 18px;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     border: none;
-    padding-bottom: 55px;
-    padding-right: 23px;
+    padding-bottom: 49px;
+    padding-right: 26px;
     padding-top: 0;
+    padding-left: 26px;
 
     &::after {
       content: "";
@@ -72,6 +84,15 @@
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 4px;
+
+  &:hover {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    color: @basic-blue-light;
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

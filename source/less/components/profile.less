@@ -5,8 +5,8 @@
   background-color: @basic-grey;
   margin-top: -53px;
   padding-top: 90px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 7.81%;
+  padding-right: 7.81%;
   padding-bottom: 39px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -24,8 +24,23 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 142px;
-    padding-left: 130px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-bottom: 189px;
+  }
+}
+
+.profile__container {
+  width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 688px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
   }
 }
 
@@ -37,16 +52,16 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 85px;
-    bottom: 45px;
+    right: 45px;
+    bottom: -62px;
     z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
     width: 198px;
     height: 198px;
-    right: 133px;
-    bottom: 265px;
+    right: 73px;
+    bottom: 56px;
     background-image: url("../img/rates-desktop.png");
   }
 }
@@ -61,6 +76,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
+    text-align: center;
     margin-bottom: 136px;
   }
 }
@@ -86,7 +103,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 351px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -112,6 +131,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 688px;
+    margin: 0 auto;
     font-size: 20px;
     line-height: 20px;
     padding-left: 89px;
@@ -130,5 +151,11 @@
       background-position: center;
       border-radius: 50%;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 363px;
+    margin-left: 73px;
+    padding-left: 87px;
   }
 }

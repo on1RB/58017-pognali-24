@@ -1,7 +1,5 @@
 .footer-contacts {
   z-index: 1;
-  display: flex;
-  flex-direction: column;
   padding-left: 26px;
   padding-right: 24px;
   border-top-left-radius: 30px;
@@ -15,27 +13,46 @@
     padding-right: 40px;
     padding-top: 46px;
     padding-bottom: 32px;
-    flex-direction: row;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 47px;
-    padding-left: 58px;
+    padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 43px;
   }
 }
 
-.footer-contacts__wrapper {
+.footer-contacts__container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
+  }
+}
+
+.footer-contacts__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    margin-bottom: 0;
+    margin: 0;
+    margin-right: 96px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -45,8 +62,8 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    margin-right: 88px;
     padding-top: 10px;
+    margin-right: 88px;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,22 +72,22 @@
   }
 }
 
-.footer-contacts__list {
-  border-bottom: 1px solid #f2f2f2;
+.footer-contacts__copyright {
+  width: 270px;
+  margin: 0 auto;
+  padding-top: 13px;
+  border-top: 1px solid #f2f2f2;
 
   @media (min-width: @tablet-width) {
+    width: 154px;
+    margin: 0;
     border: none;
+    padding-top: 16px;
   }
 }
 
-.footer-contacts__copyright {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .footer-contacts__text {
-  padding-top: 9px;
+  padding-top: 8px;
   line-height: 16px;
   font-weight: 400;
 
@@ -78,7 +95,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-right: 24px;
-    padding-top: 18px;
+    padding-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -86,10 +103,22 @@
   }
 }
 
-.footer-contacts__pic {
-  cursor: pointer;
+.footer-contacts__academy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  color: @special-grey;
 
   @media (min-width: @tablet-width) {
-    padding-top: 16px;
+    width: 154px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

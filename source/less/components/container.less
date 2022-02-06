@@ -4,7 +4,19 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
-    margin-right: 45px;
+    margin-right: 46px;
+    padding-top: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 47px;
+    padding-top: 8px;
+  }
+
+  &--step3 {
+    @media (min-width: @desktop-width) {
+      margin-right: 43px;
+    }
   }
 }
 
@@ -18,13 +30,14 @@
   font-size: 20px;
   line-height: 24px;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 400;
   color: #000000;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   opacity: 0.6;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -39,6 +52,7 @@
 
   &--current {
     opacity: 1;
+    letter-spacing: 0.11em;
   }
 
   &:last-child {

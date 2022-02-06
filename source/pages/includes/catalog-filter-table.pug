@@ -1,5 +1,12 @@
-section.catalog-filter-table
-  h3.visually-hidden Страны по Алфавиту
+section.catalog-filter-table.-desktop
+  h3._title.visually-hidden Страны по Алфавиту
+  each countries, letter in COUNTRY_NAME
+    ._container
+      button._symbol(type="button")= letter
+      ul._list
+        each country in countries
+          li._item
+            a._link= country
   button._letter.-active(type="button") A
   each item in ['Б', 'В', 'Г', 'Д', 'Е', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ч', 'Ш', 'Э', 'Ю', 'Я']
     button._letter(type="button")= item

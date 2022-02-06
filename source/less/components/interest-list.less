@@ -1,6 +1,6 @@
 .interest-list {
   display: none;
-  margin-bottom: 11px;
+  margin-bottom: 12px;
 
   &--active {
     display: flex;
@@ -55,11 +55,15 @@
   line-height: 20px;
   font-weight: 400;
   color: #000000;
-  padding-top: 3px;
+  padding-top: 4px;
   padding-left: 27px;
   padding-right: 15px;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -74,6 +78,10 @@
   }
 }
 
+.interest-list__control:hover .interest-list__label {
+  opacity: 0.6;
+}
+
 .interest-list__input[type="checkbox"]:checked + .interest-list__mark::before {
   position: absolute;
   content: "";
@@ -83,7 +91,7 @@
   background-repeat: no-repeat;
   background-position: center;
   left: 5px;
-  top: 4px;
+  top: 5px;
 
   @media (min-width: @tablet-width) {
     width: 11px;
@@ -99,7 +107,7 @@
   width: 18px;
   height: 18px;
   left: 0;
-  top: 2px;
+  top: 4px;
   border-radius: 4px;
   background-color: #ffffff;
 

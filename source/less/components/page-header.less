@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  background: #182044;
+  background: #161c35;
   color: #192144;
   padding-top: 18px;
   padding-left: 26px;
@@ -11,6 +11,7 @@
   z-index: 8;
 
   @media (min-width: @tablet-width) {
+    background: #182044;
     justify-content: space-between;
     padding: 40px;
   }
@@ -19,6 +20,31 @@
     justify-content: stretch;
     padding: 46px 60px;
     background-color: #161c35;
+  }
+
+  &--bg {
+    background-color: #182044;
+
+    @media (min-width: @desktop-width) {
+      background-color: #182044;
+    }
+  }
+}
+
+.page-header__container {
+  position: relative;
+  margin: 0 auto;
+  width: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
   }
 }
 
@@ -58,8 +84,8 @@
 .page-header__toggle {
   position: absolute;
   top: 50%;
-  right: 26px;
-  margin-top: -3.5px;
+  right: 1px;
+  margin-top: -6px;
   z-index: 2;
   display: block;
   width: 25px;
@@ -75,17 +101,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 300px;
-    top: 78px;
-    width: 60px;
-    height: 2px;
-    background-color: #ffffff;
-    cursor: initial;
-
-    &::after,
-    &::before {
-      display: none;
-    }
+    display: none;
   }
 
   &::before,

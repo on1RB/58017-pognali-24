@@ -4,6 +4,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
   padding: 0 25px;
   min-height: 568px;
@@ -49,10 +50,20 @@
     background-color: @basic-yellow;
     border-radius: 25px;
     cursor: pointer;
+
+    &:hover {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+    }
   }
 }
 
 .main-menu__wrapper {
+  width: 270px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,6 +71,7 @@
   margin-bottom: 71px;
 
   @media (min-width: @tablet-width) {
+    width: 688px;
     justify-content: flex-start;
     padding-top: 0;
     margin-bottom: 91px;
@@ -98,6 +110,14 @@
   cursor: pointer;
   margin-right: 3px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     width: 22px;
     height: 22px;
@@ -117,9 +137,13 @@
 }
 
 .main-menu__user {
+  width: 270px;
+  margin: 0 auto;
   margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
+    width: 688px;
+    box-sizing: border-box;
     padding-left: 57px;
     margin-bottom: 129px;
   }
@@ -130,7 +154,10 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    width: 688px;
+    margin: 0 auto;
     padding-left: 57px;
+    box-sizing: border-box;
     margin-bottom: 132px;
   }
 }
@@ -224,7 +251,7 @@
   border-radius: 50%;
   padding-top: 14px;
   padding-left: 13px;
-  margin-right: 16px;
+  margin-right: 11px;
   vertical-align: middle;
 
   @media (min-width: @tablet-width) {
@@ -232,19 +259,17 @@
     height: 68px;
     padding-left: 20px;
     padding-top: 20px;
-    margin-right: 23px;
+    margin-right: 14px;
     vertical-align: baseline;
   }
 
   &--mail {
     padding-left: 14px;
     padding-top: 16px;
-    margin-right: 11px;
 
     @media (min-width: @tablet-width) {
       padding-left: 21px;
       padding-top: 22px;
-      margin-right: 14px;
     }
   }
 }

@@ -5,7 +5,7 @@
   padding: 0;
   list-style-type: none;
   padding-left: 25px;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   padding-top: 20px;
 
   @media (min-width: @tablet-width) {
@@ -47,6 +47,15 @@
   opacity: 0.3;
   text-transform: uppercase;
   color: #192144;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -55,5 +64,13 @@
 
   &--current {
     opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }

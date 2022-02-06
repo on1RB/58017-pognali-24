@@ -24,7 +24,19 @@
   text-transform: uppercase;
   color: @basic-blue-light;
 
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: rgba(29, 46, 91, 0.6);
+    }
+  }
+
   &--active {
     background-color: @basic-yellow;
+
+    @media (min-width: @tablet-width) {
+      &:hover {
+        color: @basic-blue-light;
+      }
+    }
   }
 }

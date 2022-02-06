@@ -9,7 +9,7 @@
     position: absolute;
     width: 100%;
     height: 147px;
-    top: -55px;
+    top: -60px;
     background-color: @basic-yellow;
     z-index: 0;
   }
@@ -18,6 +18,19 @@
     &::before {
       display: none;
     }
+  }
+}
+
+.profile-card__container {
+  width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 618px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
   }
 }
 
@@ -36,11 +49,12 @@
   color: #ffffff;
   background-color: #182044;
   padding: 0 25px;
-  padding-top: 40px;
-  padding-bottom: 12px;
+  padding-top: 32px;
+  padding-bottom: 15px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
+
 
   &::after {
     content: "";
@@ -57,9 +71,11 @@
     font-size: 60px;
     line-height: 60px;
     padding: 0 75px;
-    padding-top: 94px;
-    padding-bottom: 66px;
+    padding-top: 91px;
+    padding-bottom: 69px;
     margin-bottom: 66px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
     &::after {
       width: 358px;
@@ -72,23 +88,21 @@
   @media (min-width: @desktop-width) {
     padding-left: 124px;
     padding-right: 124px;
-    padding-top: 78px;
-    padding-bottom: 68px;
+    padding-top: 75px;
+    padding-bottom: 71px;
     margin-bottom: 73px;
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
 
     &::after {
-      left: 124px;
+      left: 126px;
     }
   }
 }
 
 .profile-card__wrapper {
   position: relative;
-  padding: 0 42px;
   margin-bottom: 12px;
-  text-align: right;
 
   &::after {
     content: "";
@@ -97,19 +111,26 @@
     height: 100px;
     background-image: url("../img/level-80-100x100.png");
     top: 0;
-    left: 42px;
+    left: 17px;
 
     @media (min-width: @tablet-width) {
+      left: 0;
       width: 94px;
       height: 94px;
       background-image: url("../img/level-80-94x94.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 95px;
+      height: 95px;
+      top: 42px;
+      background-image: url("../img/level-80-95x95.png");
     }
   }
 
   @media (min-width: @tablet-width) {
     height: 94px;
     justify-content: space-between;
-    padding: 0 75px;
     margin-bottom: 51px;
   }
 
@@ -121,6 +142,16 @@
     height: 190px;
     right: 155px;
     top: 16px;
+  }
+}
+
+.profile-card__wrapper picture {
+  display: block;
+  text-align: right;
+  padding-right: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
   }
 }
 
@@ -145,34 +176,40 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  padding-left: 67px;
-  padding-right: 68px;
   padding-top: 10px;
   padding-bottom: 12px;
   background-color: #dfe3f0;
-  margin: 0 25px;
   border-radius: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+
+  &:hover {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 21px 30px;
     border-radius: 10px;
-    margin: 0 75px;
     margin-bottom: 52px;
     color: @basic-blue-light;
+    letter-spacing: 0.09em;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     box-sizing: border-box;
-    padding-top: 16px;
-    padding-bottom: 13px;
-    padding-left: 71px;
-    padding-right: 70px;
+    color: @basic-blue;
+    letter-spacing: 0;
+    width: 190px;
+    padding-top: 15px;
+    padding-bottom: 14px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    bottom: 132px;
-    right: 80px;
+    bottom: 134px;
+    right: 155px;
   }
 }
 
@@ -204,26 +241,28 @@
 }
 
 .profile-card__tags {
-  margin: 0 25px;
+  margin: 0;
   padding-left: 26px;
   padding-right: 26px;
-  padding-top: 15px;
+  padding-top: 17px;
   padding-bottom: 26px;
   border: 1px solid #cbced9;
   border-radius: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    margin: 0 75px;
     margin-bottom: 58px;
-    padding: 35px 40px;
+    padding-left: 40px;
+    padding-top: 32px;
+    padding-right: 40px;
+    padding-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     box-sizing: border-box;
-    margin-left: 124px;
+    margin-left: 64px;
     margin-bottom: 65px;
     width: 732px;
   }
@@ -246,22 +285,24 @@
     width: 82px;
     height: 31px;
     left: 50%;
-    top: 80px;
-    margin-left: -41px;
+    top: 82px;
+    margin-left: -43px;
     background-color: #edeff6;
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    letter-spacing: 0.07em;
     width: 83px;
-    left: 22px;
-    top: 84px;
+    left: 20px;
+    top: 83px;
   }
 }
 
 .profile-card__activity {
   box-sizing: border-box;
-  margin: 0 25px;
+  margin: 0;
   padding: 0;
   text-align: center;
   border: 1px solid #cbced9;
@@ -274,21 +315,23 @@
     width: 308px;
     height: 95px;
     left: 50%;
-    margin-left: -154px;
+    margin-left: -156px;
     top: 286px;
     padding-top: 25px;
   }
 
   @media (min-width: @desktop-width) {
     position: unset;
-    margin-right: 60px;
+    width: 384px;
+    height: 94px;
+    margin-top: 1px;
   }
 }
 
 .profile-card__transport {
   line-height: 18px;
   padding: 0 14px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue-light;
@@ -308,12 +351,14 @@
     background-color: @basic-grey;
     z-index: 1;
     margin-bottom: 0;
+    letter-spacing: 0.08em;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    left: 1150px;
-    top: 85px;
+    letter-spacing: 0.09em;
+    left: 1051px;
+    top: 83px;
     width: 154px;
   }
 }

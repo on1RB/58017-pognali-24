@@ -29,28 +29,52 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+    box-sizing: border-box;
+    padding-top: 15px;
   }
 
   &--phone {
+    padding-left: 15px;
     background-color: @special-orange;
-    background-image: url("../img/icon-phone-main-nav-desktop.svg");
+
+    &:hover {
+      background-color: #f26926;
+    }
+
+    &:active {
+      background-color: #f26926;
+    }
   }
 
   &--mail {
+    padding-left: 17px;
     background-color: #ffbd30;
-    background-image: url("../img/icon-mail-main-nav-desktop.svg");
+
+    &:hover {
+      background-color: @special-orange;
+    }
+
+    &:active {
+      background-color: @special-orange;
+    }
   }
 
   &--login {
     background-color: @basic-yellow;
-    padding-top: 16px;
-    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-bottom: 16px;
     padding-left: 29px;
     padding-right: 28px;
     border-radius: 25px;
     cursor: pointer;
+
+    &:hover {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+    }
 
     @media (min-width: @tablet-width) {
       display: block;
@@ -62,4 +86,19 @@
       padding-bottom: 16px;
     }
   }
+}
+
+.user-list__link--phone:active svg,
+.user-list__link--mail:active svg {
+  opacity: 0.3;
+}
+
+.user-list__link--phone svg {
+  width: 18px;
+  height: 18px;
+}
+
+.user-list__link--mail svg {
+  width: 16px;
+  height: 14px;
 }

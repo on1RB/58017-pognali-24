@@ -2,37 +2,85 @@
   position: relative;
   display: grid;
   grid-template-columns: 70px 162px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 0 auto;
+  width: 270px;
+  box-sizing: border-box;
   background-color: #ffffff;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   padding-top: 15px;
   padding-bottom: 23px;
   padding-left: 18px;
   padding-right: 20px;
 
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+  }
+
   @media (min-width: @tablet-width) {
+    width: 688px;
     grid-template-columns: 190px 285px 153px;
     padding-top: 32px;
     padding-left: 35px;
     padding-right: 25px;
     padding-bottom: 20px;
     margin-bottom: 39px;
-    margin-left: 40px;
-    margin-right: 40px;
     border-radius: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      background-repeat: no-repeat;
+      top: 167px;
+      right: 22px;
+    }
+
+    &--user1 {
+      &::after {
+        background-image: url("../img/level-99-60x60.png");
+      }
+    }
+
+    &--user2 {
+      &::after {
+        background-image: url("../img/level-80-60x60.png");
+      }
+    }
+
+    &--user3 {
+      &::after {
+        background-image: url("../img/level-25-60x60.png");
+      }
+    }
+
+    &--user4 {
+      &::after {
+        background-image: url("../img/level-50-60x60.png");
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
+    width: 949px;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
     padding-right: 43px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     grid-template-columns: 285px  274px 247px;
     column-gap: 50px;
+
+    &::after {
+      top: 181px;
+      right: 40px;
+    }
   }
+}
+
+.user-profile:hover .user-profile__img {
+  transform: scale(1.1);
 }
 
 .user-profile__img {
@@ -60,6 +108,7 @@
   height: 31px;
   left: 68px;
   top: 55px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 105px;
@@ -84,6 +133,7 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: 9px 10px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     width: 50px;
@@ -91,6 +141,15 @@
     background-position: 15px 17px;
   }
 }
+
+.user-profile__input[type="checkbox"]:checked:hover + .user-profile__mark::before {
+  background-color: #f9d8d8;
+}
+
+.user-profile__input[type="checkbox"]:hover + .user-profile__mark::before {
+  background-color: #edeff6;
+}
+
 
 .user-profile__input[type="checkbox"] + .user-profile__mark::before {
   background-color: #e2e5f2;
@@ -261,7 +320,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     grid-column: 3;
@@ -294,7 +353,7 @@
   }
 
   &--hidden {
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -335,6 +394,40 @@
   font-size: 15px;
   line-height: 16px;
   padding-right: 2px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    top: 26px;
+    right: 1px;
+  }
+
+  &--firsova {
+    &::before {
+      background-image: url("../img/level-99-45x45.png");
+    }
+  }
+
+  &--demin {
+    &::before {
+      background-image: url("../img/level-80-45x45.png");
+    }
+  }
+
+  &--smolov {
+    &::before {
+      background-image: url("../img/level-25-45x45.png");
+    }
+  }
+
+  &--rogovaya {
+    &::before {
+      background-image: url("../img/level-50-45x45.png");
+    }
+  }
 
   &::after {
     content: "";

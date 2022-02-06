@@ -14,30 +14,41 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 118px;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 84px;
     margin-top: -50px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 61px;
     padding-top: 110px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
 .navigation__address {
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
+  width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding-left: 35px;
+    padding-right: 35px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1320px;
+    padding-left: 223px;
+    padding-right: 75px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding-left: 208px;
-    padding-right: 60px;
   }
 }
 
@@ -115,8 +126,18 @@
   padding-top: 18px;
   padding-bottom: 20px;
   padding-left: 19px;
-  padding-right: 35px;
+  padding-right: 19px;
   background-color: @basic-yellow;
+
+  &:hover {
+    background-color: #192144;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #192144;
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -124,27 +145,35 @@
     padding-top: 24px;
     padding-bottom: 26px;
     padding-left: 34px;
-    padding-right: 50px;
+    padding-right: 30px;
     border-radius: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 324px;
+    padding-right: 29px;
+  }
+}
+
+.navigation__button svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 48px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 313px;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 16px;
-    top: 21px;
-    right: 17px;
-    background-image: url("../img/polygon-mobile-main.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      top: 31px;
-      right: 30px;
-    }
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
   }
+}
+
+.navigation__button:hover svg {
+  fill: #ffffff;
+}
+
+.navigation__button:active svg {
+  fill: #ffffff;
+  opacity: 0.3;
 }

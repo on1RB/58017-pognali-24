@@ -27,11 +27,26 @@
     padding-left: 129px;
     padding-right: 60px;
     padding-bottom: 134px;
+    border-bottom-right-radius: 56px;
+    border-bottom-left-radius: 56px;
+  }
+}
+
+.travelers__container {
+  position: relative;
+  margin: 0 auto;
+  width: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1251px;
     display: grid;
     grid-template-columns: 428px 630px;
     column-gap: 193px;
-    border-bottom-right-radius: 56px;
-    border-bottom-left-radius: 56px;
+    box-sizing: border-box;
   }
 
   &::before {
@@ -40,8 +55,8 @@
     width: 113px;
     height: 132px;
     background-color: #141b3b;
-    top: 68px;
-    left: 0;
+    top: -32px;
+    left: -25px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     z-index: -2;
@@ -49,14 +64,14 @@
     @media (min-width: @tablet-width) {
       width: 212px;
       height: 212px;
-      left: 40px;
-      top: 126px;
+      left: 0;
+      top: -66px;
       border-radius: 20px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 60px;
-      top: 125px;
+      left: -69px;
+      top: -56px;
     }
   }
 }
@@ -212,18 +227,27 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  &--tablet {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .travelers__show {
   padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 27px;
+    padding-top: 26px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 87px;
-    padding-bottom: 29px;
+    margin-top: 86px;
+    padding-bottom: 30px;
     padding-right: 95px;
     margin-left: 2px;
 

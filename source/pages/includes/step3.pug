@@ -2,20 +2,20 @@ section.step3
   ._flex-container
     ._inner
       p._title Шаг 3.
-        a._link(href="#") Развлечения
+        span._link  Развлечения
       p._description Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.
-    .container
+    .container.-step3
       button._toggle(type="button") Даты
       button._toggle(type="button") Маршрут
       button._toggle.-current(type="button") Развлечения
   ._wrapper
-    p._country Босния и Герцеговина
+    p._country.-fade Босния и Герцеговина
     picture
       source(media="(min-width: 768px)", width="70", height="47", srcset="img/bosnia-tablet.png")
       img(src="img/bosnia.png", width="35", height="25" alt="Босния и Герцеговина")
   label._label
     span.visually-hidden Опишите план ваших действий
-    textarea._plan(name="Bosnia-plan", placeholder="План действий" readonly)
+    textarea._plan(name="Bosnia-plan", placeholder="План действий" required)
   ._wrapper
     p._country Чехия
     picture
@@ -23,7 +23,4 @@ section.step3
       img(src="img/Czech.png", width="35", height="25" alt="Чехия")
   label._label.-margin
     span.visually-hidden Опишите план ваших действий
-    textarea._plan(name="Czech-plan", placeholder="План действий") Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-  ._block
-    button.step-next._button-next(type="submit") Отправить
-    a.step-prev(href="#") На шаг назад
+    textarea._plan(name="Czech-plan", placeholder="План действий" required) Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
