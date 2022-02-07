@@ -1,4 +1,5 @@
 section.step1
+  h3.visually-hidden Даты пребывания
   ._flex-container
     ._inner
       p._title Шаг 1.
@@ -18,7 +19,8 @@ section.step1
     strong._companion Длительность:
     span._person.-letter Дн.
     .counter.-order
-      input._value(type=text, value="3")
+      label._label
+        input._value(type=text, value="3")
       button._button.-reduce(type="button", aria-label="Убавить.")
       button._button.-add(type="button", aria-label="Прибавить.")
   label._child

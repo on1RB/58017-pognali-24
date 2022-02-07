@@ -98,6 +98,17 @@
 
 .user-profile__pic {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+    height: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    height: 285px;
+    padding-top: 0;
+  }
 }
 
 .user-profile__like {

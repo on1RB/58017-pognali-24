@@ -355,6 +355,8 @@
   }
 
   &--mail {
+    padding-left: 14px;
+
     @media (min-width: @tablet-width) {
       padding-top: 25px;
       padding-left: 21px;
@@ -379,7 +381,7 @@
   }
 }
 
-.interested__elipse .interested__mail {
+.interested__elipse .interested__icon-mail {
   @media (min-width: @tablet-width) {
     width: 27.62px;
     height: 18.89px;
@@ -391,13 +393,18 @@
   }
 }
 
-.interested__link--phone:hover .interested__elipse svg,
-.interested__link--mail:hover .interested__elipse svg {
+.interested__phone,
+.interested__icon-mail {
+  fill: #ffd74b;
+}
+
+.interested__link--phone:hover .interested__phone,
+.interested__link--mail:hover .interested__icon-mail {
   fill: #ffbd30;
 }
 
-.interested__link--phone:active svg,
-.interested__link--mail:active svg {
+.interested__link--phone:active .interested__phone,
+.interested__link--mail:active .interested__icon-mail {
   fill: #ffbd30;
   opacity: 0.3;
 }

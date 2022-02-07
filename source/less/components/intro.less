@@ -1,12 +1,17 @@
 .intro {
   position: relative;
   background-color: @basic-blue;
-  background-image: url("../img/bg-main-mobile.png");
+  background-image: url("../img/bg-main-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 0 -60px;
   padding-top: 31px;
   padding-bottom: 0;
   z-index: 7;
+
+  @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+    background-image: url("../img/bg-main-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 
   &::before {
     content: "";
@@ -18,6 +23,26 @@
     background-image: url("../img/traveller-mobile.png");
     background-repeat: no-repeat;
     z-index: 2;
+
+    @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-mobile@2x.png");
+      background-size: 192px auto;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 285px;
+    background-color: @basic-blue;
+    left: 0;
+    bottom: 267px;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -29,12 +54,22 @@
     background-image: url("../img/bg-main-tablet.jpg");
     background-position: 0 252px;
 
+    @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/bg-main-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+
     &::before {
       width: 372px;
       height: 451px;
       background-image: url("../img/traveller-tablet.png");
       top: 274px;
       right: 111px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/traveller-tablet@2x.png");
+        background-size: 372px auto;
+      }
     }
   }
 
@@ -47,17 +82,34 @@
     background-position: 0 -145px;
     z-index: 9;
 
+    @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/bg-main-desktop@2x.png");
+      background-size: 1440px auto;
+    }
+
     &::before {
       right: 405px;
       top: -35px;
       width: 431px;
       height: 640px;
       background-image: url("../img/traveller-desktop.png");
+
+      @media (min-resolution: 144dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/traveller-desktop@2x.png");
+        background-size: 431px auto;
+      }
     }
   }
 }
 
 .intro__wrapper {
+  width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 1320px;
     box-sizing: border-box;
@@ -86,17 +138,7 @@
 }
 
 .intro__container--bg {
-  padding-left: 25px;
-  padding-right: 25px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1320px;
-    margin-bottom: 123px;
-  }
+  width: auto;
 
   &::before {
     content: "";
@@ -111,11 +153,19 @@
       display: none;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
+    margin-bottom: 123px;
+  }
 }
 
 .intro__title {
-  width: 320px;
-  margin: 0 auto;
+  margin: 0;
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
@@ -124,7 +174,8 @@
   margin-bottom: 246px;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 60px;
     line-height: 70px;
     margin-bottom: 86px;
@@ -224,13 +275,14 @@
 
 .intro__text {
   position: relative;
-  margin: 0;
+  margin: 0 auto;
+  width: 270px;
   margin-bottom: 30px;
-  padding-left: 25px;
-  padding-right: 25px;
-  z-index: 1;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0;
     padding-left: 32px;
     margin-bottom: 213px;
   }
@@ -241,21 +293,6 @@
     padding-right: 0;
     margin-bottom: 0;
     padding-top: 12px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 285px;
-    background-color: @basic-blue;
-    left: 0;
-    top: -47px;
-    z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
   }
 }
 
